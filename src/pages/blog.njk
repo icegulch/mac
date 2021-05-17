@@ -1,0 +1,25 @@
+---
+title: Blog
+layout: layouts/post.njk
+pagination:
+  data: collections.posts
+  size: Infinity
+order: 3
+permalink: "blog/index.html"
+---
+
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <section>
+    {% for post in pagination.items | reverse %}
+      <article>
+        <h3>
+          <a href="/blog/{{ post.data.date | gimmeYear }}/{{ post.data.title | slugify }}/">
+            {{ post.data.title | safe }}
+          </a>
+        </h3>
+      </article>
+    {% endfor %}
+  </section>
+</div>

@@ -1,0 +1,23 @@
+{
+  "name": "Mount Adams Challenge",
+  "version": "1.0.0",
+  "description": "Mount Adams Challenge website",
+  "scripts": {
+    "build": "ELEVENTY_ENV=production npx @11ty/eleventy",
+    "watch": "eleventy --watch",
+    "start": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "dotenv": "^9.0.2",
+    "flat-cache": "^3.0.4",
+    "html-minifier": "^4.0.0",
+    "js-yaml": "^3.14.1",
+    "lodash": "^4.17.21",
+    "luxon": "^1.26.0",
+    "node-fetch": "^2.6.1"
+  }
+}

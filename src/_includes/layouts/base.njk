@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      {{ site.title if title == 'About' else title + ' | ' + site.title }}
+    </title>
+    <meta name="description" content="{{ site.meta_desc }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+  </head>
+  <body class="{% if projectEnvs.environment == 'development' %}foo{% elif 'production' %}bar{% else %}bah{% endif %}">
+    <header id="site-header" role="banner">
+      {% include "layouts/header.njk" %}
+    </header>
+    <main class="site-main" role="main">
+      {{ content | safe }}
+    </main>
+    <footer class="site-footer text-center py-3">
+      <a href="/contact/">
+        Contact us
+      </a><br>
+      &copy; 2021
+    </footer>
+  </body>
+</html>

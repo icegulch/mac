@@ -1,0 +1,10 @@
+# dependencies installed by npm
+/node_modules
+
+# git
+.gitignore
+
+# macOS related files
+.DS_Store
+.AppleDouble
+.LSOverride

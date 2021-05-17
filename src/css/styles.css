@@ -1,0 +1,431 @@
+@import "bootstrap.css";
+
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  font: 300 16px/1.65 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+}
+a {
+  color: #55acaa;
+}
+a:focus,
+a:hover {
+  color: #448a89;
+}
+@media screen and (max-width: 767px) {
+  .container {
+      padding: 15px;
+  }
+}
+#welcome {
+  background: transparent url(/images/welcome.jpg) no-repeat 50% 0;
+  background-size: cover;
+}
+#welcome .logo {
+  display: block;
+  width: 75%;
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto;
+}
+.challenge-teaser {
+  position: relative;
+  text-align: center;
+}
+.challenge-teaser:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  margin: 0 auto 20px;
+  background-color: #eee;
+}
+#route {
+  padding: 0 0 100px;
+  background-color: #f1f1f1;
+}
+#route .route-stats {
+  padding: 200px 0;
+  background: transparent url(/images/route.jpg) no-repeat 50% 100%;
+  background-size: cover;
+}
+#route .stat {
+  display: inline-block;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  background-color: rgba(85, 172, 170, 0.8);
+  color: #fff;
+}
+#route .stat + .stat {
+  margin-left: 10px;
+}
+#route .stat .stat-number {
+  display: block;
+  padding: 40px 0 0;
+  font-weight: 100;
+  font-size: 36px;
+  line-height: 20px;
+}
+@media screen and (max-width: 767px) {
+  #route .stat .stat-number {
+      font-weight: 300;
+  }
+}
+#route .stat .stat-unit {
+  font-size: 12px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  #route .stat .stat-unit {
+      font-weight: 300;
+  }
+}
+#route .stat-two {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+#route .stat-one {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+#route .section-content {
+  padding: 80px 0 0;
+}
+#route .route-segments {
+  padding-left: 0;
+  list-style: none;
+}
+#route .route-segment {
+  margin-top: 30px;
+  background-color: #fff;
+  color: #55acaa;
+}
+#route .route-segment-stats {
+  table-layout: fixed;
+  width: 100%;
+  background-color: #deefef;
+  line-height: 1.1;
+}
+#route .route-segment-header {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  background-color: #55acaa;
+  color: #fff;
+}
+#route .route-segment-description {
+  padding: 15px 25px 20px;
+  text-align: left;
+  line-height: 1.4;
+  color: #999;
+}
+#route .route-segment-stat {
+  padding: 15px 25px;
+}
+#route .route-segment-stat .route-segment-stat-gain-figure,
+#route .route-segment-stat .route-segment-stat-gain-unit {
+  display: block;
+}
+#route .route-segment-stat .route-segment-stat-gain-figure {
+  font-size: 36px;
+  font-weight: 100;
+}
+@media screen and (max-width: 767px) {
+  #route .route-segment-stat .route-segment-stat-gain-figure {
+      font-size: 24px;
+      font-weight: 300;
+  }
+}
+#route .route-segment-stat .route-segment-stat-gain-unit {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+#route .route-additional {
+  margin-top: 40px;
+  text-align: left;
+}
+.downloadable-directions {
+  margin-top: 50px;
+}
+#rules {
+  position: relative;
+}
+#rules:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(-30deg, transparent 75%, #deefef 75%) 0 50%, linear-gradient(30deg, transparent 75%, #deefef 75%) 0 50%;
+  background-repeat: repeat-x;
+  background-size: 30px 30px, 30px 30px;
+}
+#rules .rules-columns {
+  margin: 40px 0 0;
+  text-align: left;
+}
+#rules .rules-columns p + p {
+  margin-top: 0;
+}
+#rules .rules-columns p {
+  display: inline-block;
+  margin-bottom: 18px;
+}
+@media screen and (min-width: 992px) {
+  #rules .rules-columns {
+      -webkit-columns: 2 200px;
+      -moz-columns: 2 200px;
+      columns: 2 200px;
+      -webkit-column-gap: 1.5em;
+      -moz-column-gap: 1.5em;
+      column-gap: 1.5em;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+  }
+}
+#results {
+  position: relative;
+  text-align: center;
+  background-color: #55acaa;
+}
+
+.results-table {
+  width: 100%;
+  margin: 50px auto 0;
+  text-align: left;
+  color: #fff;
+}
+.results-table th {
+  text-transform: uppercase;
+  background-color: #4fa2a0;
+}
+.results-table td,
+.results-table th {
+  padding: 3px;
+}
+@media screen and (max-width: 767px) {
+  .results-table td,
+  .results-table th {
+      font-size: 13px;
+  }
+}
+.results-table td:first-child,
+.results-table td:last-child,
+.results-table th:first-child,
+.results-table th:last-child {
+  width: 16%;
+}
+.results-table td a {
+  color: #fff;
+}
+.results-table td a:focus,
+.results-table td a:hover {
+  text-decoration: underline;
+}
+.results-table tbody > tr:nth-child(even) > td {
+  background-color: #4fa2a0;
+}
+.results-table caption {
+  text-align: center;
+  padding-bottom: 10px;
+  color: #fff;
+  font-weight: 700;
+  caption-side: top;
+}
+.alt-section-text {
+  margin: 30px 0 0;
+  text-align: left;
+  color: #fff;
+}
+.alt-section-text a {
+  color: #fff;
+  text-decoration: underline;
+}
+#sponsors {
+  padding: 80px 15px;
+  background: transparent url(/images/challenge.jpg) no-repeat 100% 0;
+  background-size: cover;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  #sponsors {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-content: flex-start;
+      min-height: 100vh;
+      padding: 0 15px;
+  }
+}
+.section {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+.section p + p {
+  margin-top: 18px;
+}
+.section-touch {
+  position: relative;
+}
+.section-touch:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: -20px;
+  border-style: solid;
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+}
+.section-touch:before {
+  top: 0;
+  border-color: #fff transparent transparent transparent;
+  border-width: 20px 20px 0 20px;
+}
+.section-touch.section-touch-special:before {
+  border-color: #55acaa transparent transparent transparent;
+}
+.section-special {
+  background-color: #55acaa;
+  color: #fff;
+  text-align: center;
+}
+.section-xtra {
+  padding-top: 137px;
+}
+@media screen and (min-width: 768px) {
+  .section-xtra {
+      padding-top: 207px;
+      padding-bottom: 150px;
+  }
+}
+.section-alt {
+  background-color: #deefef;
+}
+.primary-title {
+  margin: 0 0 0.35em;
+  font-size: 102px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.secondary-title {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 0 0 7px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.225em;
+  text-align: center;
+  color: #777;
+}
+.secondary-title:after {
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  right: 1em;
+  background-color: #dedede;
+}
+.secondary-title-darkbg {
+  color: #fff;
+}
+.secondary-title-darkbg:after {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.secondary-title-altbg:after {
+  background-color: #ababab;
+}
+.bg-inverse {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.navbar-mac {
+  background-color: #111;
+}
+.navbar-inverse .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+}
+.navbar-inverse .navbar-nav .nav-link:focus,
+.navbar-inverse .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.navbar-brand {
+  font-family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+  /*letter-spacing: -0.025rem;*/
+  font-size: 1.75rem;
+}
+.report-card {
+  max-width: 720px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+.report-card a {
+  display: block;
+  padding: 1.5rem 0.5rem;
+}
+.report-card a h3 {
+  margin: 0;
+  color: #55acaa;
+}
+.report-card a time {
+  display: block;
+  color: #6c757d;
+}
+.report-card a:focus,
+.report-card a:hover {
+  text-decoration: none;
+  background-color: #55acaa;
+}
+.report-card a:focus h3,
+.report-card a:focus time,
+.report-card a:hover h3,
+.report-card a:hover time {
+  color: #fff;
+}
+.report {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+.report h1 {
+  margin-top: 1.5rem;
+  color: #343a40;
+}
+.report time {
+  margin-bottom: 1rem;
+  display: block;
+  color: #6c757d;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.report-section + .report-section {
+  margin-top: 1.5rem;
+}
+.report-section a {
+  color: #55acaa;
+  text-decoration: underline;
+}
+.report-section a:focus,
+.report-section a:hover {
+  text-decoration: none;
+}

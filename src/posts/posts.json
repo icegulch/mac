@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.njk",
+  "permalink": "/blog/{{ date | gimmeYear }}/{{ title | slugify }}/index.html",
+  "tags": [
+    "posts"
+  ]
+}
