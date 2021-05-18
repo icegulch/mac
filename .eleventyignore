@@ -8,3 +8,9 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Netlify admin bypass
+/src/admin/confirmation.html
+/src/admin/email-change.htm;
+/src/admin/invitation.html
+/src/admin/recovery.html
