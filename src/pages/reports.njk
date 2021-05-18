@@ -1,0 +1,24 @@
+---
+title: Reports
+layout: layouts/report.njk
+pagination:
+  data: collections.reports
+  size: Infinity
+permalink: "reports/index.html"
+---
+
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <section>
+    {% for report in pagination.items | reverse %}
+      <article>
+        <h3>
+          <a href="/reports/{{ report.data.date | gimmeYear }}/{{ report.data.title | slugify }}/">
+            {{ report.data.title | safe }}
+          </a>
+        </h3>
+      </article>
+    {% endfor %}
+  </section>
+</div>

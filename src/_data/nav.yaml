@@ -1,0 +1,20 @@
+
+-
+  name: "About"
+  link: "/"
+  section: "about"
+
+-
+  name: "Route"
+  link: "/route/"
+  section: "route"
+
+-
+  name: "Results"
+  link: "/results/"
+  section: "results"
+
+-
+  name: "Reports"
+  link: "/reports/"
+  section: "reports"

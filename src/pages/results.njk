@@ -1,7 +1,9 @@
 ---
-title: "Results"
-layout: "layouts/base.njk"
-order: 2
+title: Results
+layout: layouts/base.njk
+pagination:
+  data: results
+  size: Infinity
 permalink: "results/index.html"
 ---
 
@@ -11,7 +13,12 @@ permalink: "results/index.html"
       The Results
     </h1>
 
-    {% for year, yearResults in results | groupby('year') | dictsort | reverse %}
+<ol>
+{% for foo,bar in results | groupby() | dictsort | reverse %}
+<li>{{ foo | dump }}</li>
+{% endfor %}
+</ol>
+{#     {% for year, yearResults in results | groupby('year') | dictsort | reverse %}
       <table class="results-table">
         <caption>
           {{ year }}
@@ -47,7 +54,7 @@ permalink: "results/index.html"
         {% endfor %}
         </tbody>
       </table>
-    {% endfor %}
+    {% endfor %} #}
 
     <aside class="alt-section-text">
       <p>

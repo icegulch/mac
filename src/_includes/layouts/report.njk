@@ -1,0 +1,22 @@
+---
+layout: "layouts/base.njk"
+---
+
+<div class="container">
+  <h1>
+    {{ report.title }}
+  </h1>
+  <time class="d-block" pubdate="">
+    {{ page.date | postDate }}
+  </time>
+  <article>
+    {{ content | safe }}
+  </article>
+
+  {% set previousPost = collections.reports | getPreviousCollectionItem(page) %}
+  {% set nextPost = collections.reports | getNextCollectionItem(page) %}
+  <nav class="d-flex justify-content-between">
+  {% if previousPost %}<a href="{{ previousPost.url }}">Prev</a>{% endif %}
+  {% if nextPost %}<a href="{{ nextPost.url }}">Next</a>{% endif %}
+  </nav>
+</div>

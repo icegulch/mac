@@ -1,0 +1,12 @@
+---
+pagination:
+  data: results
+  size: 1
+  alias: result
+permalink: "zeta/{{ result.date | htmlDateString }}-{{ result.runner_name | slugify }}.yaml"
+---
+date: {{ result.date | htmlDateString }}
+name: '{{ result.runner_name }}'
+time: '{{ result.runner_time }}'
+related_report: '{{ result.related_report }}'
+hide: false

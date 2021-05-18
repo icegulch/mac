@@ -9,10 +9,10 @@
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
-      {% for page in collections.orderedPages %}
+      {% for item in nav %}
       <li class="nav-item">
-        <a href="{{ page.url }}"{% if currentUrl === page.fileSlug %} aria-current="page"{% endif %} class="nav-link">
-          {{ page.data.title }}
+        <a href="{{ item.link }}"{% if currentUrl === item.section %} aria-current="page"{% endif %} class="nav-link">
+          {{ item.name }}
         </a>
       </li>
       {%- endfor %}
