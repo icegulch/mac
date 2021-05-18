@@ -3,6 +3,7 @@ date: 2015-06-24
 title: Dave Kruschwitz's MAC!
 published: true
 related_results: ['']
+image: ""
 ---
 
 <p>And on June 24, Dave Kruschwitz from Limerick, Maine had a great day for the Mount Adams Challenge. Congrats, Dave! Here's his story:</p>

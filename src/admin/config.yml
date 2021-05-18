@@ -24,8 +24,8 @@ collections:
       - { label: "Run Date", name: "date", widget: "date", hint: "Date of attempt on the Mount Adams Challenge", required: true }
       - { label: "Published", name: "published", widget: "boolean", hint: "By default, reports are published as soon as you click the 'Publish' button in the main navigation. To prevent this, toggle the switch to the left. [ 'off' = gray | 'on' = blue]", default: true }
       - { label: "Related Result(s)", name: "related_results", widget: "relation", collection: "results", value_field: "{{slug}}", search_fields: ["name", "date"], display_fields: ["name", "date"], multiple: true, required: false }
-      - { label: "Featured Image", name: "featured_img", widget: "image", multiple: false, required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false, tagname: "" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here" }
     view_groups:
       - label: Year
         field: date

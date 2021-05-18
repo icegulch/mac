@@ -3,6 +3,7 @@ date: 2019-07-22
 title: Brian Fitzgerald, Take Two!
 published: true
 related_results: ['']
+image: ""
 ---
 
 <p>Nice job, Brian Fitzgerald... that makes two years in a row, too!</p>

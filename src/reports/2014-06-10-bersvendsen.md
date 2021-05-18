@@ -4,7 +4,7 @@ date: 2014-06-10
 published: true
 related_results:
   - 2014-06-10-odd-bersvendsen
-featured_img: /images/uploads/tumblrinlinepkpe2hdmg11si9ly8500.jpg
+image: "/images/uploads/tumblrinlinepkpe2hdmg11si9ly8500.jpg"
 ---
 ![Odd at the Summit Sign]( "Odd at the Summit Sign")
 

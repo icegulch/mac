@@ -3,6 +3,7 @@ date: 2015-06-13
 title: Myles Chouinard gets it done!
 published: true
 related_results: ['']
+image: ""
 ---
 
 <p>When I first heard of the MAC I knew I had to give it a try. I knew that it would not be easy to get under 2 hours and 10 minutes and I would have to push my limits. I love these kind of challenges, you versus yourself. It's a mental game and that is what drew me to this challenge.</p>

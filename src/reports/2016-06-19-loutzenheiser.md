@@ -3,6 +3,7 @@ date: 2016-06-19
 title: When the Mount Washington Auto Road Race Isn't Enough
 published: true
 related_results: ['']
+image: ""
 ---
 
 <p>David Sandham (the Brit) and David Loutzenheiser decided that running in the Mt Washington Road Race on Saturday was not enough and decided to do the Mt Adams Challenge on Sunday June 19!  The weather was perfect, well a little warm, but little wind, and few bugs.  So off we went!</p>
