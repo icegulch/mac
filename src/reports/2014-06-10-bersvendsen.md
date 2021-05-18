@@ -4,10 +4,8 @@ date: 2014-06-10
 published: true
 related_results:
   - 2014-06-10-odd-bersvendsen
-image: "/images/uploads/tumblrinlinepkpe2hdmg11si9ly8500.jpg"
+image: /images/uploads/tumblrinlinepkpe2hdmg11si9ly8500.jpg
 ---
-![Odd at the Summit Sign]( "Odd at the Summit Sign")
-
 <p>Thanks for the challenge, it made me go for an adventure. I might have taken a wrong turn somewhere since my distance and total elevation gain where higher than the 5.3 mi and 4488 in the invite?</p>
 <p>Here is the link to my trace.</p>
 <p>Loved every step… even coming down and celebrating Independence Day.</p>
