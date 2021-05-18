@@ -17,7 +17,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/mac-directions-with-profile.pdf");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
   eleventyConfig.addPassthroughCopy("./src/css");
-  eleventyConfig.addPassthroughCopy("./src/admin");
+  eleventyConfig.addPassthroughCopy("./src/admin/**");
 
   // Support YML because JSON effs up dates
   eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
