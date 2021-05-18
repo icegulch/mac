@@ -4,7 +4,7 @@ backend:
 local_backend: true
   # when using a custom proxy server port
   # url: http://localhost:8082/api/v1
-media_folder: "public/images/uploads"
+media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
 site_url: "https://compassionate-fermat-ce8ea1.netlify.app/"
 display_url: "mountadamschallenge.org"
