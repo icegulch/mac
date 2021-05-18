@@ -8,7 +8,7 @@ media_folder: "src/images/upload"
 public_folder: "/images"
 site_url: "https://compassionate-fermat-ce8ea1.netlify.app/"
 display_url: "mountadamschallenge.org"
-# logo_url: "https://www.mountadamschallenge.org/images/"
+logo_url: "https://compassionate-fermat-ce8ea1.netlify.app/images/logo-admin.png"
 collections:
   - name: "reports" # Used in routes, e.g., /admin/collections/blog
     label: "Reports" # Used in the UI
@@ -84,25 +84,15 @@ collections:
           - label: "Items"
             name: "items"
             widget: "list"
-            # allow_add: true
-            # add_to_top: true
-            # collapsed: true
-            # summary: "{{order}} • {{name}} • {{distance}}mi • {{grade}}% • {{elevation_change_value}}ft"
+            allow_add: true
+            add_to_top: true
+            collapsed: true
+            summary: "{{order}} • {{name}} • {{distance}}mi • {{grade}}% • {{elevation_change_value}}ft"
             fields:
               - { label: "Segment Name", name: "name", widget: "string", hint: "Trail name." }
-              # - { label: "Order", name: "order", widget: "number" }
-              # - { label: "Distance (mi)", name: "distance", widget: "number", value_type: "int", hint: "Distance of this segment in miles." }
-              # - { label: "Grade (%)", name: "grade", widget: "number", hint: "Grade of this segment as a percentage. Whole number -- no need for '%' sign" }
-              # - { label: "Elevation Change Positive?", name: "elevation_change_is_positive", widget: "boolean", hint: "Is the elevation change positive? Defaults to true. If the change is negative, slide the toggle left. [gray = 'false' | blue = 'true']", default: true }
-              # - { label: "Net Elevation Change", name: "elevation_change_value", widget: "number", hint: "Elevation change (gain or loss) as a whole number in feet." }
-              # - { label: "Description", name: "description", widget: "text", hint: "Short description of the segment." }
-            # sortable_fields: ['order', 'distance', 'grade', 'elevation_change_value']
-
-      # - label: "City"
-      #   name: "city"
-      #   widget: "relation"
-      #   collection: "relation_files"
-      #   file: "cities"
-      #   search_fields: ["cities.*.name"]
-      #   display_fields: ["cities.*.name"]
-      #   value_field: "cities.*.id"
+              - { label: "Order", name: "order", widget: "number" }
+              - { label: "Distance (mi)", name: "distance", widget: "number", value_type: "int", hint: "Distance of this segment in miles." }
+              - { label: "Grade (%)", name: "grade", widget: "number", hint: "Grade of this segment as a percentage. Whole number -- no need for '%' sign" }
+              - { label: "Elevation Change Positive?", name: "elevation_change_is_positive", widget: "boolean", hint: "Is the elevation change positive? Defaults to true. If the change is negative, slide the toggle left. [gray = 'false' | blue = 'true']", default: true }
+              - { label: "Net Elevation Change", name: "elevation_change_value", widget: "number", hint: "Elevation change (gain or loss) as a whole number in feet." }
+              - { label: "Description", name: "description", widget: "text", hint: "Short description of the segment." }
