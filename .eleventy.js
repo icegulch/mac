@@ -39,12 +39,6 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  // Debug
-  eleventyConfig.addFilter("debugger", (...args) => {
-    console.log(...args)
-    debugger;
-  })
-
   // Year only
   eleventyConfig.addFilter("gimmeYear", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("yyyy");
@@ -65,12 +59,19 @@ module.exports = function (eleventyConfig) {
      return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
 
-  // Helper to sort pages collection by frontmatter field "order"
-  eleventyConfig.addCollection("orderedPages", function (collection) {
-    return collection.getFilteredByTag("pages").sort((a, b) => {
-      return a.data.order - b.data.order;
-    });
-  });
+  // // Helper to sort pages collection by frontmatter field "order"
+  // eleventyConfig.addCollection("orderedPages", function (collection) {
+  //   return collection.getFilteredByTag("pages").sort((a, b) => {
+  //     return a.data.order - b.data.order;
+  //   });
+  // });
+
+
+  // eleventyConfig.addCollection("orderedPages", function (collection) {
+  //   return collection.getFilteredByTag("pages").sort((a, b) => {
+  //     return a.data.order - b.data.order;
+  //   });
+  // });
 
   // Minify HTML Output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {

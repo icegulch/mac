@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
   </head>
-  <body class="{% if projectEnvs.environment == 'development' %}foo{% elif 'production' %}bar{% else %}bah{% endif %}">
+  <body class="{% if process.env == development %}foo{% elif 'production' %}bar{% else %}bah{% endif %}">
     <header id="site-header" role="banner">
       {% include "layouts/header.njk" %}
     </header>

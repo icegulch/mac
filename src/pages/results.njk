@@ -12,9 +12,8 @@ permalink: "results/index.html"
     <h1 class="secondary-title secondary-title-darkbg">
       The Results
     </h1>
-
 <ol>
-{% for foo,bar in results | groupby() | dictsort | reverse %}
+{% for foo in results %}
 <li>{{ foo | dump }}</li>
 {% endfor %}
 </ol>

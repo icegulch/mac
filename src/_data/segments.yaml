@@ -1,0 +1,64 @@
+
+-
+  order: 1
+  name: "Valley Way"
+  distance: 0.9
+  grade: 12
+  elevation_change_is_positive: true
+  elevation_change_value: 594
+  description: "Start with one hand on the kiosk at Appalachia. Set a stop watch to zero and start it running! Run up Valley Way to the junction with Brookside. Turn left on Brookside."
+
+-
+  order: 2
+  name: "Brookside"
+  distance: 1.7
+  grade: 15
+  elevation_change_is_positive: true
+  elevation_change_value: 1350
+  description: "Run Brookside to Watson Path, turn right on Watson Path. **Watch for the turn off from Brookside to Watson Path very closely. It comes in at a shallow angle and is very easy to miss!**"
+
+-
+  order: 3
+  name: "Watson Path"
+  distance: 0.3
+  grade: 0
+  elevation_change_is_positive: false
+  elevation_change_value: 75
+  description: "From the Brookside junction, run Watson Path for 0.1 to Valley Way. Continue on Watson Path for another 0.2mi, running the faint, short section of Watson Path to Scar Trail. Be careful to stay on the trail here. The tread way is faint for about 200 yards."
+
+-
+  order: 4
+  name: "Scar Trail"
+  distance: 0.7
+  grade: 14
+  elevation_change_is_positive: true
+  elevation_change_value: 525
+  description: "Run Scar Trail to Air Line, turn left on Air Line."
+
+-
+  order: 5
+  name: "Airline"
+  distance: 1.2
+  grade: 23
+  elevation_change_is_positive: true
+  elevation_change_value: 1425
+  description: "Run Air Line to Gulfside. Turn right onto Gulfside."
+
+-
+  order: 6
+  name: "Gulfside"
+  distance: 0.6
+  grade: 12
+  elevation_change_is_positive: true
+  elevation_change_value: 365
+  description: "Run Gulfside to Thunderstorm Junction. Turn left onto Lowe's Path."
+
+-
+  order: 7
+  name: "Lowe's Path"
+  distance: 0.2
+  grade: 29
+  elevation_change_is_positive: true
+  elevation_change_value: 309
+  description: "Run Lowe's Path to the summit of Adams. Touch the sign. Turn off your stop watch. Snap a photo with the time on your watch showing, and the Mount Adams summit sign."
+
