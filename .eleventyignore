@@ -11,6 +11,6 @@
 
 # Netlify admin bypass
 /src/admin/confirmation.html
-/src/admin/email-change.htm;
+/src/admin/email-change.html
 /src/admin/invitation.html
 /src/admin/recovery.html
