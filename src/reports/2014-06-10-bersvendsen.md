@@ -4,6 +4,7 @@ date: 2014-06-10
 published: true
 related_results:
   - 2014-06-10-odd-bersvendsen
+featured_img: /images/tumblrinlinepkpe2hdmg11si9ly8500.jpg
 ---
 
 <p>Thanks for the challenge, it made me go for an adventure. I might have taken a wrong turn somewhere since my distance and total elevation gain where higher than the 5.3 mi and 4488 in the invite?</p>
