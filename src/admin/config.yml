@@ -1,9 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-local_backend:
-  # when using a custom proxy server port
-  url: http://localhost:8082/api/v1
+local_backend: true
 media_folder: "src/images/upload"
 public_folder: "/images"
 site_url: "https://compassionate-fermat-ce8ea1.netlify.app/"
