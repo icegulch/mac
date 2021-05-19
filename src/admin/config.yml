@@ -4,7 +4,7 @@ backend:
 local_backend: true
   # when using a custom proxy server port
   # url: http://localhost:8082/api/v1
-publish_mode: "editorial_workflow"
+# publish_mode: "editorial_workflow"
 media_folder: "src/images/uploads"
 public_folder: "/images/"
 site_url: "https://compassionate-fermat-ce8ea1.netlify.app/"
@@ -18,7 +18,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     delete: true # Allow users to delete items in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    summary: "{{year}}-{{month}}-{{day}} • {{title}}"
+    summary: "{{year}}-{{month}}-{{day}} -- {{title}}"
     description: "Accounts of folks' (mis)adventures on the MAC."
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string", hint: "Give this report a title", required: true }
@@ -39,6 +39,7 @@ collections:
       - label: Not Published
         field: published
         pattern: false
+    sortable_fields: ['date', 'title']
   - name: "results" # Used in routes, e.g., /admin/collections/blog
     identifier_field: "name"
     label: "Results" # Used in the UI
