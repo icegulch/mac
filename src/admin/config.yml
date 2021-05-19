@@ -48,6 +48,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{name}}"
     create: true # Allow users to create new documents in this collection
     delete: true # Allow users to delete items in this collection
+    editor:
+      preview: false
     summary: "{{date}} • {{name}} • [{{time}}]"
     description: "Results for each participant of the MAC. Visible on the 'Results' page."
     fields: # The fields for each document, usually in front matter
@@ -79,6 +81,8 @@ collections:
     slug: "{{order}} • {{name}}"
     create: true # Allow users to create new documents in this collection
     delete: true # Allow users to delete items in this collection
+    editor:
+      preview: false
     summary: "{{order}} • {{name}} • {{distance}}mi • {{grade}}% • {{elevation_change_value}}ft"
     description: "Make sure runners stay on course with good directions!"
     fields:
