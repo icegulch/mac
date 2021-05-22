@@ -24,31 +24,7 @@
   "segment_item": [
     {
       "stats": [
-        "Lowe's Path"
-      ],
-      "body": "Test"
-    },
-    {
-      "stats": [
-        "Gulfside"
-      ],
-      "body": "Test"
-    },
-    {
-      "stats": [
-        "Airline"
-      ],
-      "body": "Test"
-    },
-    {
-      "stats": [
-        "Scar Trail"
-      ],
-      "body": "Test"
-    },
-    {
-      "stats": [
-        "Watson Path"
+        "Valley Way"
       ],
       "body": "Test"
     },
@@ -60,7 +36,31 @@
     },
     {
       "stats": [
-        "Valley Way"
+        "Watson Path"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Scar Trail"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Airline"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Gulfside"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Lowe's Path"
       ],
       "body": "Test"
     }
