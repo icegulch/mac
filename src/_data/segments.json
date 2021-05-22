@@ -20,5 +20,49 @@
       ],
       "body": "Run Brookside to Watson Path, turn right on Watson Path. **Watch for the turn off from Brookside to Watson Path very closely. It comes in at a shallow angle and is very easy to miss!**"
     }
+  ],
+  "segment_item": [
+    {
+      "stats": [
+        "Lowe's Path"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Gulfside"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Airline"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Scar Trail"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Watson Path"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Brookside"
+      ],
+      "body": "Test"
+    },
+    {
+      "stats": [
+        "Valley Way"
+      ],
+      "body": "Test"
+    }
   ]
 }
