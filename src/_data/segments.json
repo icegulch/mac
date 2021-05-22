@@ -24,45 +24,66 @@
   "segment_item": [
     {
       "stats": [
+        ""
+      ],
+      "body": "Test",
+      "name": [
         "Valley Way"
-      ],
-      "body": "Test"
+      ]
     },
     {
       "stats": [
+        ""
+      ],
+      "body": "Test",
+      "name": [
         "Brookside"
-      ],
-      "body": "Test"
+      ]
     },
     {
       "stats": [
+        ""
+      ],
+      "body": "Test",
+      "name": [
         "Watson Path"
-      ],
-      "body": "Test"
+      ]
     },
     {
       "stats": [
+        ""
+      ],
+      "body": "Test",
+      "name": [
         "Scar Trail"
-      ],
-      "body": "Test"
+      ]
     },
     {
       "stats": [
+        ""
+      ],
+      "body": "Test",
+      "name": [
         "Airline"
-      ],
-      "body": "Test"
+      ]
     },
     {
       "stats": [
+        ""
+      ],
+      "body": "Test",
+      "name": [
         "Gulfside"
-      ],
-      "body": "Test"
+      ]
     },
     {
       "stats": [
-        "Lowe's Path"
+        ""
       ],
-      "body": "Test"
+      "body": "Test",
+      "name": [
+        "Lowe's Path"
+      ]
     }
   ]
 }
