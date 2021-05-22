@@ -1,0 +1,17 @@
+---
+title: Reports
+layout: base.njk
+permalink: "/results/reports/index.html"
+---
+
+<div class="container">
+  <ul>
+    {% for report in collections.results %}
+      <li>
+        <a href="/results/reports/{{ report.data.run_date | slug }}-{{ report.data.name | lower | slug }}/">
+          {{ report.data.name }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,86 +1,103 @@
 backend:
   name: git-gateway
   branch: main
-local_backend: true
+local_backend:
   # when using a custom proxy server port
-  # url: http://localhost:8082/api/v1
-# publish_mode: "editorial_workflow"
-media_folder: "src/images/uploads"
-public_folder: "/images/"
+  url: http://localhost:8082/api/v1
+media_folder: "/src/images/uploads/"
+public_folder: "/images/uploads/"
 site_url: "https://compassionate-fermat-ce8ea1.netlify.app/"
 display_url: "mountadamschallenge.org"
 logo_url: "/images/logo-admin.png"
 collections:
-  - name: "reports" # Used in routes, e.g., /admin/collections/blog
-    label: "Reports" # Used in the UI
-    label_singular: "Report"
-    folder: "src/reports" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    delete: true # Allow users to delete items in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    summary: "{{year}}-{{month}}-{{day}} -- {{title}}"
-    description: "Accounts of folks' (mis)adventures on the MAC."
-    fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string", hint: "Give this report a title", required: true }
-      - { label: "Run Date", name: "date", widget: "date", hint: "Date of attempt on the Mount Adams Challenge", required: true }
-      - { label: "Published", name: "published", widget: "boolean", hint: "By default, reports are published as soon as you click the 'Publish' button in the main navigation. To prevent this, toggle the switch to the left. [ 'off' = gray | 'on' = blue]", default: true }
-      - { label: "Related Result(s)", name: "related_results", widget: "relation", collection: "results", value_field: "{{slug}}", search_fields: ["name", "date"], display_fields: ["name", "date"], multiple: true, required: false }
-      - { label: "Cover Image", name: "image", widget: "image", required: false, tagname: "" }
-      - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here" }
-    view_groups:
-      - label: Year
-        field: date
-        # groups items based on the value matched by the pattern
-        pattern: \d{4}
-    view_filters:
-      - label: Published
-        field: published
-        pattern: true
-      - label: Not Published
-        field: published
-        pattern: false
-    sortable_fields: ['date', 'title']
-  - name: "results" # Used in routes, e.g., /admin/collections/blog
+  - name: "results"
+    label: "Results & Reports"
+    label_singular: "Result / Report"
+    folder: "src/results/reports/"
     identifier_field: "name"
-    label: "Results" # Used in the UI
-    label_singular: "Result"
-    folder: "src/_data/results" # The path to the folder where the documents are stored
-    extension: "yaml"
-    format: "yaml"
-    slug: "{{year}}-{{month}}-{{day}}-{{name}}"
+    slug: "{{run_date}}-{{name}}"
     create: true # Allow users to create new documents in this collection
     delete: true # Allow users to delete items in this collection
     editor:
       preview: false
-    summary: "{{date}} • {{name}} • [{{time}}]"
+    extension: "md"
+    format: "toml-frontmatter"
+    frontmatter_delimiter: ['---toml', '---']
+    summary: "{{run_date | date('YYYY-MM-DD')}} • {{name}} • [{{run_duration}}]"
     description: "Results for each participant of the MAC. Visible on the 'Results' page."
     fields: # The fields for each document, usually in front matter
-      - { label: "Run Date", name: "date", widget: "date", hint: "Date of attempt on the Mount Adams Challenge", required: true }
-      - { label: "Runner Name", name: "name", widget: "string", hint: "Runner's first then last name (e.g., 'Doug Mayer')", required: true }
-      - { label: "Runner Time", name: "time", widget: "string", hint: "Runner's run time. Format should be 'H:MM:SS'", required: true }
-      - { label: "Related Report", name: "related_report", widget: "relation", collection: "reports", value_field: "title", search_fields: ["date", "title"], display_fields: ["title"], hint: "Pair this result with a write up (report) if one exists.", required: false }
-      - { label: "Published", name: "published", widget: "boolean", hint: "By default, results are published as soon as you click the 'Publish' button in the main navigation. To prevent this, toggle the switch to the left. [ 'off' = gray | 'on' = blue]", default: true }
-    sortable_fields: ['date', 'name', 'time']
+      - label: Runner's Name
+        name: name
+        widget: string
+        hint: 'Runner''s first then last name (e.g., ''Doug Mayer'')'
+        required: true
+      - label: Run Date
+        name: run_date
+        widget: date
+        date_format: "YYYY-MM-DD"
+        format: "YYYY-MM-DD"
+        default: ''
+        hint: Date of attempt on the Mount Adams Challenge
+        required: true
+      - label: Runner's Time
+        name: run_duration
+        widget: string
+        hint: Runner's run time. Format should be 'H:MM:SS'
+        required: true
+      - label: Other Runners?
+        name: other_runners
+        widget: array
+        hint: Did this runner have company? If so, list names separated by commas (e.g, "Doug Mayer, Steve Bailey, Jacques Cousteau")
+        required: false
+      - label: Featured Image
+        label_singular: Featured Image
+        name: image
+        widget: image
+        required: false
+      - label: More images
+        label_singular: Another Image
+        name: more_images
+        widget: list
+        allow_add: true
+        add_to_top: true
+        collapsed: true
+        required: false
+        summary: "{{caption}}"
+        fields:
+          - label: Photo
+            name: photo_upload
+            widget: image
+          - label: Caption (Alternative Text)
+            name: caption
+            widget: string
+        hint: If there are photos, share them here!
+      - label: Report
+        name: body
+        widget: markdown
+        minimal: true
+        buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
+        editor_components: []
+        modes: [rich_text]
+        required: false
+        hint: If there is a report, paste it in here!
+      - label: Year
+        name: year
+        widget: hidden
+    sortable_fields:
+      - date
+      - name
+      - run_duration
     view_groups:
       - label: Year
         field: date
-        # groups items based on the value matched by the pattern
         pattern: \d{4}
-    view_filters:
-      - label: Published
-        field: published
-        pattern: true
-      - label: Not Published
-        field: published
-        pattern: false
   - name: "segments" # Used in routes, e.g., /admin/collections/blog
     identifier_field: "name"
     label: "Route Segments" # Used in the UI
     label_singular: "Segment"
-    folder: "src/_data/segments" # The path to the folder where the documents are stored
-    extension: "yaml"
-    format: "yaml"
-    slug: "{{order}} • {{name}}"
+    folder: "src/segments" # The path to the folder where the documents are stored
+    extension: "md"
+    slug: "{{order}}-{{fields.name}}"
     create: true # Allow users to create new documents in this collection
     delete: true # Allow users to delete items in this collection
     editor:
@@ -88,12 +105,54 @@ collections:
     summary: "{{order}} • {{name}} • {{distance}}mi • {{grade}}% • {{elevation_change_value}}ft"
     description: "Make sure runners stay on course with good directions!"
     fields:
-      - { label: "Order", name: "order", widget: "number", hint: "The order of this segment in relation to the start at Appalachia." }
-      - { label: "Segment Name", name: "name", widget: "string", hint: "Trail name." }
-      - { label: "Distance (mi)", name: "distance", widget: "number", value_type: "int", hint: "Distance of this segment in miles." }
-      - { label: "Grade (%)", name: "grade", widget: "number", hint: "Grade of this segment as a percentage. Whole number -- no need for '%' sign" }
-      - { label: "Elevation Change Positive?", name: "elevation_change_is_positive", widget: "boolean", hint: "Is the elevation change positive? Defaults to true. If the change is negative, slide the toggle left. [gray = 'false' | blue = 'true']", default: true }
-      - { label: "Net Elevation Change", name: "elevation_change_value", widget: "number", hint: "Elevation change (gain or loss) as a whole number in feet." }
-      - { label: "Description", name: "description", widget: "text", hint: "Short description of the segment." }
+      - label: Order
+        name: order
+        widget: number
+        hint: The order of this segment in relation to the start at Appalachia.
+      - label: Segment Name
+        name: name
+        widget: string
+        hint: Trail name.
+      - label: Distance (mi)
+        name: distance
+        widget: number
+        value_type: float
+        hint: Distance of this segment in miles.
+      - label: Grade (%)
+        name: grade
+        widget: number
+        hint: Grade of this segment as a percentage. Whole number -- no need for '%' sign
+      - label: Elevation Change Positive?
+        name: elevation_change_is_positive
+        widget: boolean
+        hint: >-
+          Is the elevation change positive? Defaults to true. If the change is
+          negative, slide the toggle left. [gray = 'false' | blue = 'true']
+        default: true
+        required: false
+      - label: Net Elevation Change
+        name: elevation_change_value
+        widget: number
+        hint: Elevation change (gain or loss) as a whole number in feet. Do not include "-" (minus) sign for loss.
+      - label: Description
+        name: body
+        widget: markdown
+        minimal: true
+        buttons: ['bold', 'italic', 'link']
+        editor_components: []
+        modes: [rich_text]
+        required: false
+        hint: Short description of the segment.
     sortable_fields: ['order', 'distance', 'grade', 'elevation_change_value']
-
+  - name: "site_info"
+    label: "Site Info"
+    description: "Sitewide info goes here."
+    files:
+      - label: "Meta"
+        name: "meta"
+        delete: false
+        file: "src/_data/site_meta.json"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string", hint: "Text that appears in search results, when shared on social media, etc."}
+          - {label: "Site Description", name: "description", widget: "text", hint: "Text that appears below title in search results and sometimes on social media. Google truncates around 160 characters.", pattern: ['.{1,160}', "Should be 160 characters or less."]}
+          - {label: "Site Url", name: "url", widget: "string"}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      {{ site_meta.title if title == 'About' else title + ' | ' + site_meta.title }}
+    </title>
+    <meta name="description" content="{{ site_meta.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+  </head>
+  <body class="{% if process.env == development %}foo{% elif 'production' %}bar{% else %}bah{% endif %}">
+    <header id="site-header" role="banner">
+      {% include "header.njk" %}
+    </header>
+    <main class="site-main" role="main">
+      {{ content | safe }}
+    </main>
+    <footer class="site-footer text-center py-3">
+      Got a question?
+      <a href="/contact/">
+        Contact us
+      </a>
+    </footer>
+  </body>
+</html>

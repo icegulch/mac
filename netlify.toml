@@ -2,7 +2,21 @@
   base = "./"
   command = "npm run build"
   publish = "public"
+  # functions = "./src/functions"
+
+[context.production]
+  environment = { NODE_VERSION = "10.15.3", NODE_ENV = "production" }
+
+
 [dev]
-  base = "./"
   command = "npm run start"
-  publish = "public"
+  framework = "#custom"
+  publish = "dist"
+  port = 3000
+  targetPort = 8181
+  NODE_ENV = "development"
+  # functionsPort = 34567
+
+# [[redirects]]
+#   from = "/post/*"
+#   to = "/blog/:splat"

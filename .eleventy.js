@@ -2,9 +2,12 @@ const yaml = require("js-yaml");
 const htmlmin = require("html-minifier");
 const { DateTime } = require("luxon");
 const _ = require("lodash");
-const markdownFilter = require('./src/filters/markdown-filter.js');
 const slugify = require("slugify");
 require("dotenv").config();
+const util = require('util');
+const toml = require("toml");
+
+
 
 module.exports = function (eleventyConfig) {
 
@@ -24,11 +27,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/admin/invitation.html');
   eleventyConfig.addPassthroughCopy('./src/admin/recovery.html');
 
-  // Support YML because JSON effs up dates
-  eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
 
-  // Markdown, please
-  eleventyConfig.addFilter('markdownFilter', markdownFilter);
+  eleventyConfig.setFrontMatterParsingOptions({
+    engines: {
+      toml: toml.parse.bind(toml)
+    }
+  });
 
   // Slugify
   eleventyConfig.addFilter("slugify", function (str) {
@@ -59,6 +63,10 @@ module.exports = function (eleventyConfig) {
      return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
 
+  eleventyConfig.addFilter('dump', obj => {
+      return util.inspect(obj)
+  });
+
   // // Helper to sort pages collection by frontmatter field "order"
   // eleventyConfig.addCollection("orderedPages", function (collection) {
   //   return collection.getFilteredByTag("pages").sort((a, b) => {
@@ -66,12 +74,17 @@ module.exports = function (eleventyConfig) {
   //   });
   // });
 
-
-  // eleventyConfig.addCollection("orderedPages", function (collection) {
-  //   return collection.getFilteredByTag("pages").sort((a, b) => {
-  //     return a.data.order - b.data.order;
-  //   });
+  // eleventyConfig.addCollection("results", function(collectionApi) {
+  //   return collectionApi.getFilteredByTag("results");
   // });
+
+    eleventyConfig.addCollection("resultsByYear", (collection) => {
+      return _.chain(collection.getFilteredByTag("results"))
+        .groupBy((result) => result.data.date.getFullYear())
+        .toPairs()
+        .reverse()
+        .value();
+    });
 
   // Minify HTML Output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {

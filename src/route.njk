@@ -1,0 +1,82 @@
+---
+title: Route
+layout: base.njk
+permalink: /route/
+---
+
+<section id="route" class="section">
+  <figure class="route-stats">
+    <figcaption>
+      <div class="stat stat-one slide-left">
+        <span class="stat-number">7</span>
+        <span class="stat-unit">Trails</span>
+      </div>
+      <div class="stat stat-two slide-left">
+        <span class="stat-number">5.6</span>
+        <span class="stat-unit">Miles</span>
+      </div>
+      <div class="stat stat-three slide-left">
+        <span class="stat-number">4,493</span>
+        <span class="stat-unit">Feet</span>
+      </div>
+    </figcaption>
+  </figure>
+
+  <h1>
+    {{ title }}
+  </h1>
+
+  <div class="container">
+    <header class="section__lede text-left">
+      <p>
+        The Mount Adams Challenge route follows the dramatic Airline Ridge up Mount Adams. It is 5.6 miles long, includes 4493' (1370m) of elevation gain, and follows 7 different trails. Familiarize yourself with the directions below before you head out. You may also want to download <a href="/mac-directions-with-profile.pdf">printable directions</a> for when you're out on the trails.
+      </p>
+    </header>
+    <ol class="route-segments">
+      {% for segment in collections.segments %}
+        <li class="route-segment">
+          <header class="route-segment-header">
+            {{ loop.index }}. {{ segment.data.name }}
+          </header>
+          <table class="route-segment-stats">
+            <tr>
+              <td class="route-segment-stat route-segment-stat-distance">
+                <img src="/images/route-segment-distance.png" width="50" alt="Route segment distance icon">
+                <span class="route-segment-stat-gain-figure">
+                  {{ segment.data.distance }}
+                </span>
+                <span class="route-segment-stat-gain-unit">
+                  miles
+                </span>
+              </td>
+              <td class="route-segment-stat route-segment-stat-grade">
+                <img src="/images/route-segment-grade.png" width="50" alt="Route segment grade icon">
+                <span class="route-segment-stat-gain-figure">
+                  {{ segment.data.grade }}%
+                </span>
+                <span class="route-segment-stat-gain-unit">
+                  grade
+                </span>
+              </td>
+              <td class="route-segment-stat route-segment-stat-gain">
+                <img src="/images/route-segment-gain{{ '-minus' if not segment.data.elevation_change_is_positive }}.png" width="50" alt="Route Segment positive gain icon">
+                <span class="route-segment-stat-gain-figure">
+                  {{ segment.data.elevation_change_value }}
+                </span>
+                <span class="route-segment-stat-gain-unit">
+                  feet
+                </span>
+              </td>
+            </tr>
+          </table>
+          <article class="route-segment-description">
+            {{ segment.templateContent | safe }}
+          </article>
+        </li>
+      {% endfor %}
+    </ol>
+    <div class="embed-responsive embed-responsive-16by9 route-map">
+      <iframe src='https://caltopo.com/m/VMN0' scrolling='no' seamless='seamless'></iframe>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+---
+order: 6
+name: Gulfside
+distance: 0.6
+grade: 12
+elevation_change_is_positive: true
+elevation_change_value: 365
+---
+Run Gulfside to Thunderstorm Junction. Turn left onto Lowe's Path.

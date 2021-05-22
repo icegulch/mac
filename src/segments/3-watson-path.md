@@ -1,0 +1,9 @@
+---
+order: 3
+name: Watson Path
+distance: 0.3
+grade: 0
+elevation_change_is_positive: false
+elevation_change_value: 75
+---
+From the Brookside junction, run Watson Path for 0.1 to Valley Way. Continue on Watson Path for another 0.2mi, running the faint, short section of Watson Path to Scar Trail. Be careful to stay on the trail here. The tread way is faint for about 200 yards.

@@ -1,0 +1,25 @@
+---
+layout: base.njk
+eleventyComputed:
+  title: "Mount Adams Report from {{name}}"
+---
+
+
+<div class="container">
+  <h1>
+    {{ name }}
+  </h1>
+  <time>{{date | postDate}}</time>
+  <p>Result: {{ run_duration }}
+  <ul>
+  {% for runner in other_runners %}
+    <li>{{ runner }}</li>
+  {% endfor %}
+  </ul>
+  <article>
+    {{ content | safe }}
+  </article>
+  {% if previousPost %}Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
+  {% if nextPost %}Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
+</div>
+
