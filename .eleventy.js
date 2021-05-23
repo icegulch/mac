@@ -11,6 +11,9 @@ const toml = require("toml");
 
 module.exports = function (eleventyConfig) {
 
+  // Shorthand
+  eleventyConfig.addLayoutAlias('base', 'base.njk');
+
   // A useful way to reference the context we are runing eleventy in
   let env = process.env.ELEVENTY_ENV;
 
@@ -27,6 +30,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/admin/invitation.html');
   eleventyConfig.addPassthroughCopy('./src/admin/recovery.html');
 
+  eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
 
   eleventyConfig.setFrontMatterParsingOptions({
     engines: {
@@ -41,11 +45,6 @@ module.exports = function (eleventyConfig) {
       replacement: "-",
       remove: /[*+~.·,()'"`´%!?¿:@]/g
     });
-  });
-
-  // Year only
-  eleventyConfig.addFilter("gimmeYear", dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("yyyy");
   });
 
   // Nice date for post-y type things
@@ -66,25 +65,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('dump', obj => {
       return util.inspect(obj)
   });
-
-  // // Helper to sort pages collection by frontmatter field "order"
-  // eleventyConfig.addCollection("orderedPages", function (collection) {
-  //   return collection.getFilteredByTag("pages").sort((a, b) => {
-  //     return a.data.order - b.data.order;
-  //   });
-  // });
-
-  // eleventyConfig.addCollection("results", function(collectionApi) {
-  //   return collectionApi.getFilteredByTag("results");
-  // });
-
-    eleventyConfig.addCollection("resultsByYear", (collection) => {
-      return _.chain(collection.getFilteredByTag("results"))
-        .groupBy((result) => result.data.date.getFullYear())
-        .toPairs()
-        .reverse()
-        .value();
-    });
 
   // Minify HTML Output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
@@ -107,7 +87,7 @@ module.exports = function (eleventyConfig) {
     addPassthroughCopy: true,
     templateFormats: ['md', 'njk', 'html'],
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
+    markdownTemplateEngine: "md",
     dir: {
       input: "src",
       output: "public",

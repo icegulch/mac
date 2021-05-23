@@ -10,10 +10,59 @@ site_url: "https://compassionate-fermat-ce8ea1.netlify.app/"
 display_url: "mountadamschallenge.org"
 logo_url: "/images/logo-admin.png"
 collections:
+
+  - name: route
+    label: Route
+    description: "Make sure runners stay on course with good directions!"
+    files:
+      - label: "Content"
+        name: "route_page"
+        delete: false
+        file: "src/_data/route_page.json"
+        fields:
+          - label: Preamble
+            name: preamble
+            widget: markdown
+            minimal: true
+            buttons: ['bold', 'italic', 'link']
+            editor_components: ['']
+            modes: ['rich_text']
+            required: true
+            hint: Short description at the top of the Route page.
+          - label: Segments
+            label_singular: Segment
+            name: segment_item
+            widget: list
+            allow_add: true
+            add_to_top: true
+            collapsed: true
+            required: true
+            summary: "{{fields.name}}"
+            fields:
+              - label: Segment Name
+                name: name
+                widget: string
+                hint: "Trail name"
+                required: true
+              - label: Segment Stats
+                name: stats
+                widget: list
+                hint: "Stats shorthand: (Distance, Grade, Elevation Change, Elevation Change Is Positive? - 'true' or 'false')."
+                required: true
+              - label: Segment Description
+                name: body
+                widget: markdown
+                minimal: true
+                buttons: ['bold', 'italic', 'link']
+                editor_components: []
+                modes: [rich_text]
+                required: true
+                hint: Short description of the segment.
+
   - name: "results"
-    label: "Results & Reports"
-    label_singular: "Result / Report"
-    folder: "src/results/reports/"
+    label: "Results"
+    label_singular: "Result"
+    folder: "src/markdown/results/"
     identifier_field: "name"
     slug: "{{run_date}}-{{name}}"
     create: true # Allow users to create new documents in this collection
@@ -24,7 +73,7 @@ collections:
     format: "toml-frontmatter"
     frontmatter_delimiter: ['---toml', '---']
     summary: "{{run_date | date('YYYY-MM-DD')}} • {{name}} • [{{run_duration}}]"
-    description: "Results for each participant of the MAC. Visible on the 'Results' page."
+    description: "Results for each participant of the MAC. Reports filed here appear in the 'Reports' section of the site."
     fields: # The fields for each document, usually in front matter
       - label: Runner's Name
         name: name
@@ -36,6 +85,7 @@ collections:
         widget: date
         date_format: "YYYY-MM-DD"
         format: "YYYY-MM-DD"
+        picker_utc: true
         default: ''
         hint: Date of attempt on the Mount Adams Challenge
         required: true
@@ -47,36 +97,14 @@ collections:
       - label: Other Runners?
         name: other_runners
         widget: array
-        hint: Did this runner have company? If so, list names separated by commas (e.g, "Doug Mayer, Steve Bailey, Jacques Cousteau")
+        hint: Did this runner have MAC accomplices? If so, list names separated by commas (e.g, "Doug Mayer, Steve Bailey, Jacques Cousteau")
         required: false
-      - label: Featured Image
-        label_singular: Featured Image
-        name: image
-        widget: image
-        required: false
-      - label: More images
-        label_singular: Another Image
-        name: more_images
-        widget: list
-        allow_add: true
-        add_to_top: true
-        collapsed: true
-        required: false
-        summary: "{{caption}}"
-        fields:
-          - label: Photo
-            name: photo_upload
-            widget: image
-          - label: Caption (Alternative Text)
-            name: caption
-            widget: string
-        hint: If there are photos, share them here!
       - label: Report
         name: body
         widget: markdown
         minimal: true
         buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
-        editor_components: []
+        editor_components: ['image']
         modes: [rich_text]
         required: false
         hint: If there is a report, paste it in here!
@@ -84,66 +112,15 @@ collections:
         name: year
         widget: hidden
     sortable_fields:
-      - date
+      - run_date
       - name
       - run_duration
     view_groups:
       - label: Year
         field: date
         pattern: \d{4}
-  - name: "segments" # Used in routes, e.g., /admin/collections/blog
-    identifier_field: "name"
-    label: "Route Segments" # Used in the UI
-    label_singular: "Segment"
-    folder: "src/segments" # The path to the folder where the documents are stored
-    extension: "md"
-    slug: "{{order}}-{{fields.name}}"
-    create: true # Allow users to create new documents in this collection
-    delete: true # Allow users to delete items in this collection
-    editor:
-      preview: false
-    summary: "{{order}} • {{name}} • {{distance}}mi • {{grade}}% • {{elevation_change_value}}ft"
-    description: "Make sure runners stay on course with good directions!"
-    fields:
-      - label: Order
-        name: order
-        widget: number
-        hint: The order of this segment in relation to the start at Appalachia.
-      - label: Segment Name
-        name: name
-        widget: string
-        hint: Trail name.
-      - label: Distance (mi)
-        name: distance
-        widget: number
-        value_type: float
-        hint: Distance of this segment in miles.
-      - label: Grade (%)
-        name: grade
-        widget: number
-        hint: Grade of this segment as a percentage. Whole number -- no need for '%' sign
-      - label: Elevation Change Positive?
-        name: elevation_change_is_positive
-        widget: boolean
-        hint: >-
-          Is the elevation change positive? Defaults to true. If the change is
-          negative, slide the toggle left. [gray = 'false' | blue = 'true']
-        default: true
-        required: false
-      - label: Net Elevation Change
-        name: elevation_change_value
-        widget: number
-        hint: Elevation change (gain or loss) as a whole number in feet. Do not include "-" (minus) sign for loss.
-      - label: Description
-        name: body
-        widget: markdown
-        minimal: true
-        buttons: ['bold', 'italic', 'link']
-        editor_components: []
-        modes: [rich_text]
-        required: false
-        hint: Short description of the segment.
-    sortable_fields: ['order', 'distance', 'grade', 'elevation_change_value']
+
+
   - name: "site_info"
     label: "Site Info"
     description: "Sitewide info goes here."
@@ -156,3 +133,60 @@ collections:
           - {label: "Site Title", name: "title", widget: "string", hint: "Text that appears in search results, when shared on social media, etc."}
           - {label: "Site Description", name: "description", widget: "text", hint: "Text that appears below title in search results and sometimes on social media. Google truncates around 160 characters.", pattern: ['.{1,160}', "Should be 160 characters or less."]}
           - {label: "Site Url", name: "url", widget: "string"}
+
+
+# SEGMENTS AS COLLECTION
+  # - name: "segments" # Used in routes, e.g., /admin/collections/blog
+  #   identifier_field: "name"
+  #   label: "Route Segments" # Used in the UI
+  #   label_singular: "Segment"
+  #   folder: "src/segments" # The path to the folder where the documents are stored
+  #   extension: "md"
+  #   slug: "{{order}}-{{fields.name}}"
+  #   create: true # Allow users to create new documents in this collection
+  #   delete: true # Allow users to delete items in this collection
+  #   editor:
+  #     preview: false
+  #   summary: "{{order}} • {{name}} • {{distance}}mi • {{grade}}% • {{elevation_change_value}}ft"
+  #   description: "Make sure runners stay on course with good directions!"
+  #   fields:
+  #     - label: Order
+  #       name: order
+  #       widget: number
+  #       hint: The order of this segment in relation to the start at Appalachia.
+  #     - label: Segment Name
+  #       name: name
+  #       widget: string
+  #       hint: Trail name.
+  #     - label: Distance (mi)
+  #       name: distance
+  #       widget: number
+  #       value_type: float
+  #       hint: Distance of this segment in miles.
+  #     - label: Grade (%)
+  #       name: grade
+  #       widget: number
+  #       hint: Grade of this segment as a percentage. Whole number -- no need for '%' sign
+  #     - label: Elevation Change Positive?
+  #       name: elevation_change_is_positive
+  #       widget: boolean
+  #       hint: >-
+  #         Is the elevation change positive? Defaults to true. If the change is
+  #         negative, slide the toggle left. [gray = 'false' | blue = 'true']
+  #       default: true
+  #       required: false
+  #     - label: Net Elevation Change
+  #       name: elevation_change_value
+  #       widget: number
+  #       hint: Elevation change (gain or loss) as a whole number in feet. Do not include "-" (minus) sign for loss.
+  #     - label: Description
+  #       name: body
+  #       widget: markdown
+  #       minimal: true
+  #       buttons: ['bold', 'italic', 'link']
+  #       editor_components: []
+  #       modes: [rich_text]
+  #       required: false
+  #       hint: Short description of the segment.
+  #   sortable_fields: ['order', 'distance', 'grade', 'elevation_change_value']
+

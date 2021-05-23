@@ -1,0 +1,75 @@
+{
+  "segment_item": [
+    {
+      "body": "Start with one hand on the kiosk at Appalachia. Set a stop watch to zero and start it running! Run up Valley Way to the junction with Brookside. Turn left on Brookside.",
+      "name": "Valley Way",
+      "stats": [
+        "0.9",
+        "12",
+        "594",
+        "true"
+      ]
+    },
+    {
+      "name": "Brookside",
+      "stats": [
+        "1.7",
+        "15",
+        "1350",
+        "true"
+      ],
+      "body": "Run Brookside to Watson Path, turn right on Watson Path. **Watch for the turn off from Brookside to Watson Path very closely. It comes in at a shallow angle and is very easy to miss!**"
+    },
+    {
+      "name": "Watson Path",
+      "stats": [
+        "0.3",
+        "0",
+        "75",
+        "false"
+      ],
+      "body": "From the Brookside junction, run Watson Path for 0.1 to Valley Way. Continue on Watson Path for another 0.2mi, running the faint, short section of Watson Path to Scar Trail. Be careful to stay on the trail here. The tread way is faint for about 200 yards."
+    },
+    {
+      "body": "Run Scar Trail to Air Line, turn left on Air Line.",
+      "name": "Scar Trail",
+      "stats": [
+        "0.7",
+        "14",
+        "525",
+        "true"
+      ]
+    },
+    {
+      "name": "Airline",
+      "stats": [
+        "1.2",
+        "23",
+        "1425",
+        "true"
+      ],
+      "body": "Run Air Line to Gulfside. Turn right onto Gulfside."
+    },
+    {
+      "body": "Run Gulfside to Thunderstorm Junction. Turn left onto Lowe's Path.",
+      "name": "Gulfside",
+      "stats": [
+        "0.6",
+        "12",
+        "365",
+        "true"
+      ]
+    },
+    {
+      "body": "Run Lowe's Path to the summit of Adams. Touch the sign. Turn off your stop watch. Snap a photo with the time on your watch showing, and the Mount Adams summit sign.",
+      "name": "Lowe'sPath",
+      "stats": [
+        "0.2",
+        "29",
+        "309",
+        "true"
+      ]
+    }
+  ],
+  "body": "The Mount Adams Challenge route follows the dramatic Airline Ridge up Mount Adams. It is 5.6 miles long, includes 4493' (1370m) of elevation gain, and follows 7 different trails. Familiarize yourself with the directions below before you head out. You may also want to download [printable directions](/mac-directions.pdf) for when you're out on the trails."
+}

@@ -1,6 +1,10 @@
 ---
+pagination:
+  data: collections.results
+  size: Infinity
+  alias: results
 title: Results
-layout: base.njk
+layout: base
 permalink: "/results/"
 ---
 
@@ -10,7 +14,7 @@ permalink: "/results/"
       The Results
     </h1>
 
-    {% for year, yearResults in collections.resultsByYear %}
+    {% for year, yearResults in results | groupby('data.year') | dictsort | reverse %}
 
       <table class="results-table">
         <caption>

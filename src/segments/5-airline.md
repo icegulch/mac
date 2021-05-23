@@ -1,9 +1,0 @@
----
-order: 5
-name: Airline
-distance: 1.2
-grade: 23
-elevation_change_is_positive: true
-elevation_change_value: 1425
----
-Run Air Line to Gulfside. Turn right onto Gulfside.
