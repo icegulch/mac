@@ -6,7 +6,7 @@ pagination:
   reverse: true
 permalink: "/results/{{ report.data.run_date | htmlDateString | slugify }}-{{ report.data.name | slugify }}/index.html"
 eleventyComputed:
-  title: "{{ report.name }}'s {{ report.run_date }} Report"
+  title: "{{ report.data.name }}'s {{ report.data.run_date | postDate }} Report"
 layout: base2
 ---
 
