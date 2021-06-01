@@ -6,12 +6,12 @@ other_runners = ["Camille-Antoine Ouimet", "Melina Dubois-Verret"]
 year = 2017
 date = 2017-10-19T00:00:00.000Z
 ---
+<img src="/assets/images/uploads/boucher-summit-sign.jpg" alt="Remi, Camille-Antoine, and Melina at the summit" width="1278" height="960" class="img-fluid">
 
 Me and two of my friends did the Mount Adams Challenge together today (october 19th). It was a great run and an awesome day! Thank you for creating this great challenge! :)
 
 Time was 1:57:51 and you can find the track on <a href="https://www.movescount.com/moves/move182336720">https://www.movescount.com/moves/move182336720</a>.
 
-<img src="/assets/images/uploads/boucher-summit-sign.jpg" alt="Remi, Camille-Antoine, and Melina at the summit" width="1278" height="960" class="img-fluid">
 <img src="/assets/images/uploads/boucher-summit.jpg" alt="Taking in the hard-earned views" width="640" height="680" class="img-fluid">
 
 <img src="/assets/images/uploads/bU1545xpCmxj.jpg" alt="" width="1024" height="768" class="img-fluid">
@@ -21,5 +21,3 @@ Time was 1:57:51 and you can find the track on <a href="https://www.movescount.c
 <img src="/assets/images/uploads/d4d005wroRdl.jpg" alt="" width="1024" height="768" class="img-fluid">
 
 <img src="/assets/images/uploads/V4jyReufQnmI.jpg" alt="" width="1024" height="768" class="img-fluid">
-
-
