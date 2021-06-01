@@ -95,6 +95,10 @@ body {
   margin-top: 2rem;
 }
 
+.results .main-inner p {
+  margin-bottom: 2rem;
+}
+
 .main-inner details + details {
   margin-top: 2rem;
 }
@@ -183,6 +187,50 @@ body {
 
 .main-inner strong {
   font-weight: 500;
+}
+
+.main-inner form label {
+  margin-top: 2rem;
+  display: block;
+  width: 100%;
+  font-family: 'Teko', sans-serif;
+  font-size: 28px;
+}
+
+.main-inner input, .main-inner textarea {
+  display: block;
+  padding: .5rem .25rem;
+  width: 100%;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+}
+
+.main-inner form .aria-invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.main-inner .btn {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: #EA580C;
+  color: #fff;
+}
+
+.main-inner .btn:hover {
+  background-color: #334155;
+}
+
+.thank-you .main-inner h2:before {
+  content: '\2665';
+  margin-right: 0.5rem;
+  color: #EA580C;
 }
 
 .main-inner .reports-nav {

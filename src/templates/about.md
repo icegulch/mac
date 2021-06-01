@@ -4,6 +4,8 @@ layout: base2
 permalink: /
 ---
 
+![Mount Adams beckons you](/assets/images/home-hero.jpg)
+
 ## The Challenge
 
 Reach the summit of Mount Adams via the designated route in under 2h10.
@@ -14,7 +16,7 @@ Based on the [Leukerbads 70 minute dash](http://runthealps.com/blog/leukerbads-7
 
 ## The Reward
 
-SAalt Pub will congratulate you with the beverage of your choice and a very cool certificate courtesy of Borealchick Designs. But before we can, you’ll need to [contact us](/contact/). See below for the full scoop!
+[SAalt Pub](https://www.libbysbistro.org/) will congratulate you with the beverage of your choice and a very cool certificate courtesy of Borealchick Designs. But before we can, you’ll need to [contact us](/contact/). See below for the full scoop!
 
 ## The Rules
 

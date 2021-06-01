@@ -8,6 +8,10 @@ layout: base2
 permalink: "/results/"
 ---
 
+<p>
+  Click on a result below to view more details. If you'd like to add your result to the list and claim your reward, <a href="/contact/">send us your info</a>.
+</p>
+
 {% for year, yearResults in results | groupby('data.year') | dictsort | reverse %}
   <details open>
     <summary>

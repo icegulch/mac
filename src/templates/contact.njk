@@ -4,26 +4,29 @@ layout: base2
 permalink: /contact/
 ---
 
-  <div class="main-inner">
-        <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/thank-you">
-          <label for="name">
-            Name
-          </label>
-          <input id="name" type="text" name="name" class="form-control" required>
-          <label for="email" class="mt-3">
-            Email Address
-          </label>
-          <input id="email" type="email" name="email-address" class="form-control" required>
-          <label for="message" class="mt-3" required>
-            Your message
-          </label>
-          <textarea id="message" name="message" class="form-control mb-3" rows="10" required></textarea>
-          <div data-netlify-recaptcha="true" class="mt-3"></div>
-          <div class="mt-3">
-            <button type="submit" class="btn btn-primary">
-              Send
-            </button>
-          </div>
-        </form>
-  </div>
+<p>
+  Thanks for your interest in the Mount Adams Challenge. Use the form below to contact us. If you're submitting a run result, please provide details of your adventure. It'd be great if you can include a link to your summit photo(s), but we can always follow up if you'd prefer to email them.
+</p>
 
+<form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you">
+  <p class="aria-invisible">
+    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+  </p>
+  <label for="name">
+    Name
+  </label>
+  <input id="name" type="text" name="name" required>
+  <label for="email">
+    Email Address
+  </label>
+  <input id="email" type="email" name="email-address" required>
+  <label for="message" required>
+    Your message
+  </label>
+  <textarea id="message" name="message" rows="10" required></textarea>
+  <div>
+    <button type="submit" class="btn">
+      Send
+    </button>
+  </div>
+</form>

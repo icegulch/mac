@@ -4,7 +4,6 @@ layout: base2
 permalink: /route/
 ---
 
-
 1. ## Valley Way
 
     Start with one hand on the kiosk at Appalachia. Set a stop watch to zero and start it running! Run up Valley Way to the junction with Brookside. Turn left on Brookside.
