@@ -18,12 +18,12 @@ body {
   min-height: 100vh;
 }
 
-@media screen and (min-width: 768px) and (min-height: 500px) {
+@media screen and (min-width: 992px) and (min-height: 500px) {
   body {
-    grid-template-areas: ". header main ."
-                         ". footer  main ."
-                         ". footer  main .";
-    grid-template-columns: auto auto 1fr auto;
+    grid-template-areas: "header main"
+                         "footer  main"
+                         "footer  main";
+    grid-template-columns: minmax(400px, 50vh) 1fr;
     justify-content: center;
   }
 }
@@ -38,7 +38,7 @@ body {
 .nav-brand {
   display: block;
   margin-bottom: 0.5rem;
-  font-family: 'Teko', serif;
+  font-family: 'Teko', sans-serif;
   font-size: 44px;
 }
 
@@ -66,7 +66,7 @@ body {
   background-color: #fff;
 }
 
-@media screen and (min-width: 768px) and (min-height: 500px) {
+@media screen and (min-width: 992px) and (min-height: 500px) {
   #site-main {
     height: 100vh;
     overflow-y: scroll;
@@ -81,7 +81,7 @@ body {
   font: var(--font_stack);
 }
 
-@media screen and (min-width: 768px) and (min-height: 500px) {
+@media screen and (min-width: 992px) and (min-height: 500px) {
   .main-inner {
     max-width: 720px;
     min-height: 100vh;
@@ -98,7 +98,7 @@ body {
 
 .main-inner h2, .main-inner summary {
   margin-bottom: 0.3718rem;
-  font-family: 'Teko', serif;
+  font-family: 'Teko', sans-serif;
   font-size: 28px;
   color: #334155;
 }
@@ -125,7 +125,7 @@ body {
 }
 
 .main-inner ol > li::marker {
-  font-family: 'Teko', serif;
+  font-family: 'Teko', sans-serif;
   font-size: 28px;
   color: #EA580C;
 }
@@ -189,12 +189,13 @@ body {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-gap: 1px;
+  place-items: center;
   border-top: 1px solid #CBD5E1;
   border-bottom: 1px solid #CBD5E1;
   margin-bottom: 2rem;
   text-align: center;
   font: 300 18px/1 'sf mono', monospace;
-  background-color: #CBD5E1;
+  /*background-color: #CBD5E1;*/
 }
 
 .main-inner .reports-nav > li {
@@ -204,6 +205,11 @@ body {
 .main-inner .reports-nav > li > a, .main-inner .reports-nav > li > span {
   display: block;
   padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.15rem;
+  color: #647488;
 }
 
 #site-footer {
@@ -219,9 +225,15 @@ body {
   text-decoration: underline;
 }
 
+#site-footer #MAC_logo {
+  display: inline-block;
+  fill: #fff;
+  max-width: 200px;
+  height: auto;
+}
 
 .results-list {
-  font: 300 16px/1.4 'sf mono', monospace;
+  font: 300 16px/1.9 'sf mono', monospace;
 }
 
 @media screen and (min-width: 576px) {
@@ -234,6 +246,7 @@ body {
 .results-list__item a {
   display: grid;
   grid-template-columns: auto 1fr auto;
+  place-items: start;
   padding: 0.25rem 0;
   text-decoration: none;
   color: #334155;
@@ -250,6 +263,10 @@ body {
 
 .results-list__item span {
   padding: 0.5rem;
+}
+
+.report-article {
+  margin-top: 2rem;
 }
 
 .embed-responsive {

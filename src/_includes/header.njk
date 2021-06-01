@@ -1,5 +1,5 @@
 
-{% set curURL %}{{ page.fileSlug }}{% endset %}
+{% set curURL %}{{ page.url }}{% endset %}
 
 
 <a class="nav-brand" href="/">
@@ -12,13 +12,13 @@
 </a>
 
 <nav class="main-nav">
-  <a href="/" class="main-nav-link{{ ' active' if curURL === 'about'}}">
+  <a href="/" class="main-nav-link{{ ' active' if curURL === '/' }}">
     About
   </a>
-  <a href="/route/" class="main-nav-link{{ ' active' if curURL === 'route'}}">
+  <a href="/route/" class="main-nav-link{{ ' active' if curURL.includes('route') }}">
     Route
   </a>
-  <a href="/results" class="main-nav-link{{ ' active' if curURL === 'results'}}">
+  <a href="/results" class="main-nav-link{{ ' active' if curURL.includes('results') }}">
     Results
   </a>
 </nav>
