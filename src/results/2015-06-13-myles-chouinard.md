@@ -5,6 +5,7 @@ run_duration = "2:08:00"
 year = 2015
 date = 2015-06-13T00:00:00.000Z
 ---
+<img src="/assets/images/uploads/myles-summit.jpg" alt="Myles at the Summit Sign" width="500" height="500" class="img-fluid">
 
 When I first heard of the MAC I knew I had to give it a try. I knew that it would not be easy to get under 2 hours and 10 minutes and I would have to push my limits. I love these kind of challenges, you versus yourself. It's a mental game and that is what drew me to this challenge.
 
@@ -16,6 +17,5 @@ I looked at my watch to see I had less than ten minutes till I would reach the t
 
 Myles Chouinard
 
-<img src="/assets/images/uploads/myles-summit.jpg" alt="Myles at the Summit Sign" width="500" height="500" class="img-fluid">
 
 

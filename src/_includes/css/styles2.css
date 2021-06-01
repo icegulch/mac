@@ -269,6 +269,15 @@ body {
   margin-top: 2rem;
 }
 
+.report-article img, .report-article p {
+  margin-bottom: 1rem;
+}
+
+.report-article img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .embed-responsive {
   position: relative;
   display: block;

@@ -6,13 +6,3 @@ year = 2016
 date = 2016-06-19T00:00:00.000Z
 other_runners = ["David Loutzenheiser"]
 ---
-I finally made the trip north for the MAC this morning. This was supposed to be a casual recon trip for a more serious attempt in August, but at some point I realized I could finish in under two hours, so I picked up the pace a little.
-
-It's a geat route. I hadn't been on that section of Scar Trail before, or Gulfside, for that matter. The Watson Path junction with Valley Way had a large group sitting all around the sign post and on the Watson Path. I went down far enough to realize my mistake, but not terribly far.
-
-I had forgotten just how crazy the parking situation is at Appalachia. Holy smokes! I arrived at 7:00 and found cars already 100 yards down the road.
-
-
-Jeff Lane, Center Conway, NH
-
-<img src="/assets/images/uploads/lane.jpg" alt="Jeff's Watch at the Summit Sign" width="1280" height="960" class="img-fluid">

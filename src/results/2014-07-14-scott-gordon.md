@@ -5,6 +5,7 @@ run_duration = "2:05:22"
 year = 2014
 date = 2014-07-14T00:00:00.000Z
 ---
+<img src="/assets/images/uploads/tumblrinlineplb3ids8xk1si9ly8500.jpg" alt="Scott Gordon's Watch at the Summit Sign" width="500" height="373" class="img-fluid">
 
 I am really not a trail runner.  But I enjoy a challenge, and I hike a lot.  So it was that I found myself sitting at the White Mountain Café drinking far too much coffee one morning last week when barista-extraordinaire Carly mentioned the Mount Adams Challenge and suggested I might want to try it.  Easy for her to say.  Actually, it was a good suggestion.  Two hours and ten minutes?  I quickly calculated my pace and figured a simple fast 4.5 mile hike or so up the Valley Way with a stint over the Scar and up the Air Line would be no problem in that time.  But alas, I quickly found out the route was not quite so short.  So, after bragging, albeit sarcastically, that I would easily “shred” the threshold time by at least 4 minutes, I was not feeling so cocky all of a sudden.  Some more calculations in my head and I was realizing that I was either going to have to actually run some of this route or be forced to eat my words.  Trail running was clearly in my future because I've never really found eating my words too appetizing.
 
@@ -16,6 +17,5 @@ Scott Gordon
 Dover, NH
 and part time Randolph NH resident
 
-<img src="/assets/images/uploads/tumblrinlineplb3ids8xk1si9ly8500.jpg" alt="Scott Gordon's Watch at the Summit Sign" width="500" height="373" class="img-fluid">
 
 
