@@ -4,65 +4,17 @@ backend:
 local_backend:
   # when using a custom proxy server port
   url: http://localhost:8082/api/v1
-media_folder: "/src/images/uploads/"
+media_folder: "/src/assets/images/uploads/"
 public_folder: "/images/uploads/"
 site_url: "https://compassionate-fermat-ce8ea1.netlify.app/"
 display_url: "mountadamschallenge.org"
-logo_url: "/images/logo-admin.png"
+logo_url: "/assets/images/logo-admin.png"
 collections:
-
-  - name: route
-    label: Route
-    description: "Make sure runners stay on course with good directions!"
-    files:
-      - label: "Content"
-        name: "route_page"
-        delete: false
-        file: "src/_data/route_page.json"
-        fields:
-          - label: Preamble
-            name: preamble
-            widget: markdown
-            minimal: true
-            buttons: ['bold', 'italic', 'link']
-            editor_components: ['']
-            modes: ['rich_text']
-            required: true
-            hint: Short description at the top of the Route page.
-          - label: Segments
-            label_singular: Segment
-            name: segment_item
-            widget: list
-            allow_add: true
-            add_to_top: true
-            collapsed: true
-            required: true
-            summary: "{{fields.name}}"
-            fields:
-              - label: Segment Name
-                name: name
-                widget: string
-                hint: "Trail name"
-                required: true
-              - label: Segment Stats
-                name: stats
-                widget: list
-                hint: "Stats shorthand: (Distance, Grade, Elevation Change, Elevation Change Is Positive? - 'true' or 'false')."
-                required: true
-              - label: Segment Description
-                name: body
-                widget: markdown
-                minimal: true
-                buttons: ['bold', 'italic', 'link']
-                editor_components: []
-                modes: [rich_text]
-                required: true
-                hint: Short description of the segment.
 
   - name: "results"
     label: "Results"
     label_singular: "Result"
-    folder: "src/markdown/results/"
+    folder: "src/results/"
     identifier_field: "name"
     slug: "{{run_date}}-{{name}}"
     create: true # Allow users to create new documents in this collection
@@ -133,60 +85,3 @@ collections:
           - {label: "Site Title", name: "title", widget: "string", hint: "Text that appears in search results, when shared on social media, etc."}
           - {label: "Site Description", name: "description", widget: "text", hint: "Text that appears below title in search results and sometimes on social media. Google truncates around 160 characters.", pattern: ['.{1,160}', "Should be 160 characters or less."]}
           - {label: "Site Url", name: "url", widget: "string"}
-
-
-# SEGMENTS AS COLLECTION
-  # - name: "segments" # Used in routes, e.g., /admin/collections/blog
-  #   identifier_field: "name"
-  #   label: "Route Segments" # Used in the UI
-  #   label_singular: "Segment"
-  #   folder: "src/segments" # The path to the folder where the documents are stored
-  #   extension: "md"
-  #   slug: "{{order}}-{{fields.name}}"
-  #   create: true # Allow users to create new documents in this collection
-  #   delete: true # Allow users to delete items in this collection
-  #   editor:
-  #     preview: false
-  #   summary: "{{order}} • {{name}} • {{distance}}mi • {{grade}}% • {{elevation_change_value}}ft"
-  #   description: "Make sure runners stay on course with good directions!"
-  #   fields:
-  #     - label: Order
-  #       name: order
-  #       widget: number
-  #       hint: The order of this segment in relation to the start at Appalachia.
-  #     - label: Segment Name
-  #       name: name
-  #       widget: string
-  #       hint: Trail name.
-  #     - label: Distance (mi)
-  #       name: distance
-  #       widget: number
-  #       value_type: float
-  #       hint: Distance of this segment in miles.
-  #     - label: Grade (%)
-  #       name: grade
-  #       widget: number
-  #       hint: Grade of this segment as a percentage. Whole number -- no need for '%' sign
-  #     - label: Elevation Change Positive?
-  #       name: elevation_change_is_positive
-  #       widget: boolean
-  #       hint: >-
-  #         Is the elevation change positive? Defaults to true. If the change is
-  #         negative, slide the toggle left. [gray = 'false' | blue = 'true']
-  #       default: true
-  #       required: false
-  #     - label: Net Elevation Change
-  #       name: elevation_change_value
-  #       widget: number
-  #       hint: Elevation change (gain or loss) as a whole number in feet. Do not include "-" (minus) sign for loss.
-  #     - label: Description
-  #       name: body
-  #       widget: markdown
-  #       minimal: true
-  #       buttons: ['bold', 'italic', 'link']
-  #       editor_components: []
-  #       modes: [rich_text]
-  #       required: false
-  #       hint: Short description of the segment.
-  #   sortable_fields: ['order', 'distance', 'grade', 'elevation_change_value']
-

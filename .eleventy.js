@@ -6,7 +6,7 @@ const slugify = require("slugify");
 require("dotenv").config();
 const util = require('util');
 const toml = require("toml");
-
+const CleanCSS = require("clean-css");
 
 
 module.exports = function (eleventyConfig) {
@@ -19,16 +19,10 @@ module.exports = function (eleventyConfig) {
 
   // Let some files pass through to public
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
-  eleventyConfig.addPassthroughCopy("./src/images/**");
+  eleventyConfig.addPassthroughCopy("./src/assets/**");
   eleventyConfig.addPassthroughCopy("./src/mac-directions-with-profile.pdf");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
-  eleventyConfig.addPassthroughCopy("./src/css");
-  eleventyConfig.addPassthroughCopy('./src/admin/config.yml');
-  eleventyConfig.addPassthroughCopy('./src/admin/index.html');
-  eleventyConfig.addPassthroughCopy('./src/admin/confirmation.html');
-  eleventyConfig.addPassthroughCopy('./src/admin/email-change.html');
-  eleventyConfig.addPassthroughCopy('./src/admin/invitation.html');
-  eleventyConfig.addPassthroughCopy('./src/admin/recovery.html');
+  eleventyConfig.addPassthroughCopy('./src/admin/**');
 
   eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
 
@@ -49,21 +43,30 @@ module.exports = function (eleventyConfig) {
 
   // Nice date for post-y type things
   eleventyConfig.addFilter("postDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("LLLL d, yyyy");
+    return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("LLLL d, yyyy");
   });
 
   // Short date for results page
   eleventyConfig.addFilter("shortDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("LLL d");
+    return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("LLL-dd");
+  });
+
+  // Short date for results page
+  eleventyConfig.addFilter("gimmeYear", dateObj => {
+    return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("yyyy");
   });
 
   // htmlDateString
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+     return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
 
   eleventyConfig.addFilter('dump', obj => {
       return util.inspect(obj)
+  });
+
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   // Minify HTML Output
@@ -84,13 +87,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   return {
-    addPassthroughCopy: true,
-    templateFormats: ['md', 'njk', 'html'],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "md",
     dir: {
       input: "src",
       output: "public",
     },
+    templateFormats: ["njk", "md"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
+    passthroughFileCopy: true,
   };
 };

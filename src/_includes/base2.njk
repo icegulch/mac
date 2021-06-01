@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="prefetch" as="font" href="/fonts/teko-v10-latin-regular.woff2" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>
+      {{ site_meta.title if title == 'About' else title + ' | ' + site_meta.title }}
+    </title>
+    <meta name="description" content="{{ site_meta.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% set css %}
+      {% include "css/font.css" %}
+      {% include "css/_preflight.css" %}
+      {% include "css/styles2.css" %}
+    {% endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
+
+  </head>
+  <body>
+{# {% if process.env == development %}
+foo
+{% else %}
+bah
+{% endif %} #}
+    <header id="site-header" role="banner">
+      {% include "header.njk" %}
+    </header>
+
+    <main id="site-main" role="main">
+      <div class="main-inner">
+        {{ content | safe }}
+      </div>
+    </main>
+
+    <footer id="site-footer" role="contentinfo">
+      <div style="text-align:center;margin-bottom:1rem">
+        <img src="/assets/images/logo.svg" width="146" alt="Mount Adams Challenge logo" style="display:inline-block">
+      </div>
+      Got a question?
+      <a href="/contact/">
+        Contact us
+      </a>
+    </footer>
+
+  </body>
+</html>

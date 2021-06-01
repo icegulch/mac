@@ -10,7 +10,7 @@
 
 [dev]
   command = "npm run start"
-  # framework = "#custom"
+  framework = "#custom"
   publish = "public"
   port = 3000
   targetPort = 8181
