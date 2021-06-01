@@ -6,7 +6,7 @@ other_runners = ["Ringo Starr", "Johnny Knoxville", "Doug Mayer"]
 year = 2021
 date = 2021-06-01T00:00:00.000Z
 ---
-![wonderful view](/images/uploads/burakian-view-2019.jpg "wonderful view")
+![wonderful view indeed](/images/uploads/kruschwitz-view.jpg "wonderful view indeed")
 
 Spicy jalapeno cow swine landjaeger, commodo ipsum chuck chislic. Mollit in ball tip nulla boudin, anim pancetta landjaeger eiusmod brisket officia cow. Spare ribs ea beef turducken pastrami bacon. Ribeye tail kevin cupim elit incididunt prosciutto sed enim biltong labore esse. Anim porchetta adipisicing beef ribs ad.
 
