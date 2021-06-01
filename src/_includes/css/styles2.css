@@ -324,12 +324,15 @@ body {
 
 .report-article img, .report-article p {
   margin-bottom: 1rem;
-  display: inline-block;
 }
 
 .report-article img {
   margin-left: auto;
   margin-right: auto;
+}
+
+.report-article a {
+  word-wrap: break-word;
 }
 
 .embed-responsive {
