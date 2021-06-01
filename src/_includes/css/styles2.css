@@ -95,6 +95,9 @@ body {
   margin-top: 2rem;
 }
 
+.main-inner details + details {
+  margin-top: 2rem;
+}
 
 .main-inner h2, .main-inner summary {
   margin-bottom: 0.3718rem;
@@ -105,15 +108,12 @@ body {
 
 .main-inner summary {
   cursor: pointer;
+  outline: none;
 }
 
-.main-inner summary::marker {
+.main-inner summary::marker, .main-inner summary::-webkit-details-marker {
   font-size: 24px;
   color: #EA580C;
-}
-
-.main-inner details + details {
-  margin-top: 2rem;
 }
 
 .main-inner ol {
@@ -189,17 +189,19 @@ body {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-gap: 1px;
-  place-items: center;
   border-top: 1px solid #CBD5E1;
   border-bottom: 1px solid #CBD5E1;
   margin-bottom: 2rem;
   text-align: center;
   font: 300 18px/1 'sf mono', monospace;
-  /*background-color: #CBD5E1;*/
+  background-color: #CBD5E1;
 }
 
 .main-inner .reports-nav > li {
   background-color: #fff;
+  display: flex;
+  place-items: center;
+  justify-content: center;
 }
 
 .main-inner .reports-nav > li > a, .main-inner .reports-nav > li > span {
@@ -208,8 +210,18 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
+  font-weight: 400;
   letter-spacing: 0.15rem;
-  color: #647488;
+  color: #475569;
+  opacity: 0.6;
+}
+
+.main-inner .reports-nav > li > a:hover {
+  opacity: 1;
+}
+
+.main-inner .reports-nav > li > span {
+  opacity: 0.2;
 }
 
 #site-footer {
