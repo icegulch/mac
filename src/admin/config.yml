@@ -1,10 +1,10 @@
 backend:
   name: git-gateway
   branch: main
-local_backend:
+local_backend: true
   # when using a custom proxy server port
-  url: http://localhost:8082/api/v1
-media_folder: "/assets/images/uploads/"
+  # url: http://localhost:8082/api/v1
+media_folder: "/src/assets/images/uploads/"
 public_folder: "/assets/images/uploads/"
 site_url: "https://compassionate-fermat-ce8ea1.netlify.app/"
 display_url: "mountadamschallenge.org"
