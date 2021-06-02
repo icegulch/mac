@@ -12,7 +12,7 @@ Spicy jalapeno cow swine landjaeger, commodo ipsum chuck chislic. Mollit in ball
 
 Sed pastrami sint pig, ex jerky fatback biltong eu hamburger doner picanha meatloaf spare ribs. Ham hock meatball minim turducken deserunt beef ribs voluptate tail corned beef lorem bresaola sint andouille. Cillum alcatra leberkas est bacon pariatur. Turducken cupim esse beef. Sunt pork belly consequat elit.
 
-![Hey, Nice and Cool Up Here](/images/uploads/2020-06-19scott-gordon.jpg "Hey, Nice and Cool Up Here")
+![Hey, Nice and Cool Up Here](/assets/images/uploads/2020-06-19scott-gordon.jpg "Hey, Nice and Cool Up Here")
 
 Chislic ea beef ribs in, rump **shankle alcatra nulla aute officia** biltong proident fugiat. Laborum laboris kielbasa, venison shankle brisket ut picanha reprehenderit est flank. Ball tip beef kielbasa cow. Irure tongue pastrami, buffalo ham tempor beef aute pork chop. Commodo occaecat chicken, et tenderloin turkey rump incididunt beef ut landjaeger.
 
