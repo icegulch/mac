@@ -6,7 +6,7 @@ other_runners = ["Dick Cavet", "Ricky Schroeder"]
 year = 2021
 date = 2021-05-01T00:00:00.000Z
 ---
-![Foobar](/images/uploads/challenge.jpg "Twice Around")
+![Foobar](/assets/images/uploads/2ZpP6dDAWRUj.jpg "Twice Around")
 
 Spicy jalapeno cow swine landjaeger, commodo ipsum chuck chislic. Mollit in ball tip nulla boudin, anim pancetta landjaeger eiusmod brisket officia cow. Spare ribs ea beef turducken pastrami bacon. Ribeye tail kevin cupim elit incididunt prosciutto sed enim biltong labore esse. Anim porchetta adipisicing beef ribs ad.
 
@@ -20,7 +20,7 @@ Chislic ea beef ribs in, rump **shankle alcatra nulla aute officia** biltong pro
 
 ### Beef ribs ea short ribs
 
-#### brisket jowl do porchetta. 
+#### brisket jowl do porchetta.
 
 ##### Ad cillum burgdoggen deserunt non kevin
 
