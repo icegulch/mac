@@ -119,6 +119,8 @@ collections:
       - label: "Meta"
         name: "meta"
         delete: false
+        editor:
+          preview: false
         file: "src/_data/site_meta.json"
         fields:
           - {label: "Site Title", name: "title", widget: "string", hint: "Text that appears in search results, when shared on social media, etc."}
