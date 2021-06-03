@@ -6,13 +6,13 @@ other_runners = ["Dick Cavet", "Ricky Schroeder"]
 year = 2021
 date = 2021-05-01T00:00:00.000Z
 ---
-![Foobar](/images/uploads/challenge.jpg "Twice Around")
+![Foobar](/assets/images/uploads/2ZpP6dDAWRUj.jpg "Twice Around")
 
 Spicy jalapeno cow swine landjaeger, commodo ipsum chuck chislic. Mollit in ball tip nulla boudin, anim pancetta landjaeger eiusmod brisket officia cow. Spare ribs ea beef turducken pastrami bacon. Ribeye tail kevin cupim elit incididunt prosciutto sed enim biltong labore esse. Anim porchetta adipisicing beef ribs ad.
 
 Sed pastrami sint pig, ex jerky fatback biltong eu hamburger doner picanha meatloaf spare ribs. Ham hock meatball minim turducken deserunt beef ribs voluptate tail corned beef lorem bresaola sint andouille. Cillum alcatra leberkas est bacon pariatur. Turducken cupim esse beef. Sunt pork belly consequat elit.
 
-![Hey, Nice and Cool Up Here](/images/uploads/2020-06-19scott-gordon.jpg "Hey, Nice and Cool Up Here")
+![Hey, Nice and Cool Up Here](/assets/images/uploads/2020-06-19scott-gordon.jpg "Hey, Nice and Cool Up Here")
 
 Chislic ea beef ribs in, rump **shankle alcatra nulla aute officia** biltong proident fugiat. Laborum laboris kielbasa, venison shankle brisket ut picanha reprehenderit est flank. Ball tip beef kielbasa cow. Irure tongue pastrami, buffalo ham tempor beef aute pork chop. Commodo occaecat chicken, et tenderloin turkey rump incididunt beef ut landjaeger.
 
@@ -20,7 +20,7 @@ Chislic ea beef ribs in, rump **shankle alcatra nulla aute officia** biltong pro
 
 ### Beef ribs ea short ribs
 
-#### brisket jowl do porchetta. 
+#### brisket jowl do porchetta.
 
 ##### Ad cillum burgdoggen deserunt non kevin
 
