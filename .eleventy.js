@@ -20,6 +20,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/**");
   eleventyConfig.addPassthroughCopy("./src/mac-directions-with-profile.pdf");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  eleventyConfig.addPassthroughCopy('./src/admin/**');
   eleventyConfig.addPassthroughCopy('./src/admin/config.yml');
   eleventyConfig.addPassthroughCopy('./src/admin/index.html');
   eleventyConfig.addPassthroughCopy('./src/admin/confirmation.html');
