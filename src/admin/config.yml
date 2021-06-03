@@ -98,7 +98,7 @@ collections:
       - label: Segment Stats
         name: stats
         widget: array
-        hint: "Stats shorthand: (Distance, Grade, Elevation Change)."
+        hint: "Segment stats shorthand: Distance, Grade, Elevation Change."
         required: true
       - label: Segment Description
         name: body
