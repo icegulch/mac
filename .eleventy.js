@@ -1,7 +1,5 @@
-const yaml = require("js-yaml");
 const htmlmin = require("html-minifier");
 const { DateTime } = require("luxon");
-const _ = require("lodash");
 const slugify = require("slugify");
 require("dotenv").config();
 const util = require('util');

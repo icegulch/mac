@@ -21,8 +21,5 @@
     "luxon": "^1.26.0",
     "node-fetch": "^2.6.1",
     "toml": "^3.0.0"
-  },
-  "devDependencies": {
-    "datocms-client": "^3.4.10"
   }
 }

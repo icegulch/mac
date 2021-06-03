@@ -1,0 +1,42 @@
+---
+title: Route
+layout: base
+permalink: /route/
+---
+
+<figure>
+  <img src="/assets/images/route-hero.jpg" loading="lazy" alt="Trail running crossing Cold Brook in the Northern Presidental Range" width="2000" height="1000">
+  <figcaption>
+    <a href="https://klementovichphoto.com">
+      klementovichphoto.com
+    </a>
+  </figcaption>
+</figure>
+
+<div class="main-inner__wrapper">
+
+<p>
+  The Mount Adams Challenge route follows the dramatic Airline Ridge up Mount Adams. It is 5.6 miles long, includes 4493' (1370m) of elevation gain, and follows 7 different trails. Familiarize yourself with the directions below before you head out. You may also want to download <a href="/assets/mac-directions-with-profile.pdf">printable directions</a> for when you're out on the trails.
+</p>
+
+<ol>
+  {% for segment in collections.segments %}
+    <li>
+      <h2>{{ segment.data.name }}</h2>
+      {{ segment.templateContent | safe }}
+      <ul>
+        {% for stat in segment.data.stats %}
+          <li>
+            {{ stat }}
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ol>
+
+<figure class="embed-responsive embed-responsive-1by1">
+  <iframe src='https://caltopo.com/m/VMN0' loading="eager"></iframe>
+</figure>
+
+</div>

@@ -7,7 +7,7 @@ pagination:
 permalink: "/results/{{ report.data.run_date | htmlDateString | slugify }}-{{ report.data.name | slugify }}/index.html"
 eleventyComputed:
   title: "{{ report.data.name }}'s {{ report.data.run_date | postDate }} Report"
-layout: base2
+layout: base
 ---
 
 <nav aria-labelledby="my-pagination">
@@ -48,25 +48,26 @@ layout: base2
   </ul>
 </nav>
 
-<h2>
-  {{ report.data.name }}'s MAC Report
-</h2>
-<time>{{ report.data.run_date | postDate }}</time>
-<p>Result: {{ report.data.run_duration }}</p>
-{% if report.data.other_runners.length %}
-  <ul>
-    {% set main_run_date = report.data.run_date %}
-    {% for runner in report.data.other_runners %}
-      <li>
-        <a href="/results/{{ main_run_date | htmlDateString | slugify }}-{{ runner | slugify }}/">
-          {{ runner }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-{% endif %}
+<div class="main-inner__wrapper">
+  <h2>
+    {{ report.data.name }}'s MAC Report
+  </h2>
+  <time>{{ report.data.run_date | postDate }}</time>
+  <p>Result: {{ report.data.run_duration }}</p>
+  {% if report.data.other_runners.length %}
+    <ul>
+      {% set main_run_date = report.data.run_date %}
+      {% for runner in report.data.other_runners %}
+        <li>
+          <a href="/results/{{ main_run_date | htmlDateString | slugify }}-{{ runner | slugify }}/">
+            {{ runner }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 
-<article class="report-article">
-  {{ report.templateContent | safe }}
-</article>
-
+  <article class="report-article">
+    {{ report.templateContent | safe }}
+  </article>
+</div>
