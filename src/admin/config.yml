@@ -13,8 +13,7 @@ collections:
 - name: pages
   label: Pages
   label_singular: Page
-  create: false
-  files:
+å  files:
     - name: home
       label: Homepage
       delete: false
