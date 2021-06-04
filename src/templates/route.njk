@@ -20,7 +20,7 @@ permalink: /route/
 </p>
 
 <ol>
-  {% for segment in collections.segments %}
+  {% for segment in collections.segments | sort(false, true, 'order') %}
     <li>
       <h2>{{ segment.data.name }}</h2>
       {{ segment.templateContent | safe }}
@@ -35,8 +35,8 @@ permalink: /route/
   {% endfor %}
 </ol>
 
-<figure class="embed-responsive embed-responsive-4by3">
-  <iframe src='https://www.gaiagps.com/public/p50rRQVgyk2T8baUmdArnkN1?embed=True' loading="lazy"></iframe>
+<figure class="embed-responsive">
+  <iframe src='https://www.gaiagps.com/public/GZ18PETwFaQQL5atRs0dbFnI?embed=True' loading="lazy" class="embed-responsive-item"></iframe>
 </figure>
 
 </div>
