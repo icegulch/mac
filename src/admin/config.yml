@@ -49,7 +49,7 @@ collections:
       - label: Other Runners?
         name: other_runners
         widget: array
-        hint: Did this runner have MAC accomplices? If so, list names separated by commas (e.g, "Doug Mayer, Steve Bailey, Jacques Cousteau")
+        hint: Did this runner have company? If so, list names separated by commas (e.g, "Doug Mayer, Steve Bailey, Jacques Cousteau")
         required: false
       - label: Report
         name: body

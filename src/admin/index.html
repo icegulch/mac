@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <!-- Include Netlify Identity for authentication -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="/admin/previews.js" type="text/babel"></script>
     <script>
       var ArrayControl = createClass({
         handleChange: function (e) {
@@ -48,7 +49,7 @@
         },
       };
       CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
-
+      CMS.registerPreviewStyle(`{% include "css/styles.css" %}`, { raw: true })
       CMS.registerEventListener({
         name: 'preSave',
         handler: ({ entry }) => {
