@@ -18,8 +18,8 @@ collections:
     slug: "{{run_date}}-{{name}}"
     create: true # Allow users to create new documents in this collection
     delete: true # Allow users to delete items in this collection
-    # editor:
-    #   preview: false
+    editor:
+      preview: false
     extension: "md"
     format: "toml-frontmatter"
     frontmatter_delimiter: ['---toml', '---']

@@ -27,7 +27,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/admin/email-change.html');
   eleventyConfig.addPassthroughCopy('./src/admin/invitation.html');
   eleventyConfig.addPassthroughCopy('./src/admin/recovery.html');
-  eleventyConfig.addPassthroughCopy('./src/admin/preview-templates/**');
 
   eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
 
