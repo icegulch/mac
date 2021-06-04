@@ -1,0 +1,77 @@
+---
+pagination:
+  data: collections.results
+  size: 1
+  alias: report
+  reverse: true
+permalink: "/results/{{ report.data.run_date | htmlDateString | slugify }}-{{ report.data.name | slugify }}/index.html"
+eleventyComputed:
+  title: "{{ report.data.name }}'s {{ report.data.run_date | postDate }} Report"
+---
+
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+  <nav aria-labelledby="my-pagination">
+    <ul class="reports-nav">
+      <li>
+        {% if pagination.href.previous %}
+          <a href="{{ pagination.href.previous }}">
+            <svg xmlns="http://www.w3.org/2000/svg" style="height:16px;width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+          </a>
+        {% else %}
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" style="height:16px;width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+          </span>
+        {% endif %}
+      </li>
+      <li>
+        <a href="/results/">All Results</a>
+      </li>
+      <li>
+        {% if pagination.href.next %}
+          <a href="{{ pagination.href.next }}">
+            <svg xmlns="http://www.w3.org/2000/svg" style="height:16px;width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        {% else %}
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" style="height:16px;width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </span>
+        {% endif %}
+      </li>
+    </ul>
+  </nav>
+
+  <div class="main-inner__wrapper">
+    <h2>
+      {{ report.data.name }}'s MAC Report
+    </h2>
+    <time>{{ report.data.run_date | postDate }}</time>
+    <p>Result: {{ report.data.run_duration }}</p>
+    {% if report.data.other_runners.length %}
+      <ul>
+        {% set main_run_date = report.data.run_date %}
+        {% for runner in report.data.other_runners %}
+          <li>
+            <a href="/results/{{ main_run_date | htmlDateString | slugify }}-{{ runner | slugify }}/">
+              {{ runner }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <article class="report-article">
+      {{ report.templateContent | safe }}
+    </article>
+  </div>
+{% endblock %}
+

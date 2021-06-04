@@ -10,6 +10,55 @@ site_url: "https://www.mountadamschallenge.org/"
 display_url: "https://www.mountadamschallenge.org"
 collections:
 
+- name: pages
+  label: Pages
+  label_singular: Page
+  create: false
+  files:
+    - name: home
+      label: Homepage
+      delete: false
+      file: src/about.md
+      slug: '{{slug}}'
+      fields:
+        - label: Layout
+          name: layout
+          widget: hidden
+          default: templates/about.njk
+        - label: Title
+          name: title
+          widget: hidden
+          default: About
+        - label: Permalink
+          name: permalink
+          widget: hidden
+          default: /
+        - label: Body
+          name: body
+          widget: markdown
+    - name: route
+      label: Route
+      delete: false
+      file: src/route.md
+      slug: '{{slug}}'
+      fields:
+        - label: Layout
+          name: layout
+          widget: hidden
+          default: templates/route.njk
+        - label: Title
+          name: title
+          widget: hidden
+          default: Route
+        - label: Permalink
+          name: permalink
+          widget: hidden
+          default: /route/
+        - label: Body
+          name: body
+          widget: markdown
+
+
   - name: "results"
     label: "Results"
     label_singular: "Result"

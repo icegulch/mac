@@ -36,11 +36,12 @@ foo
 bah
 {% endif %} #}
     <header id="site-header" role="banner">
-      {% include "header.njk" %}
+      {% include "layouts/header.njk" %}
     </header>
     <main id="site-main" role="main">
       <div class="main-inner">
-        {{ content | safe }}
+        {% block content %}
+        {% endblock content %}
       </div>
     </main>
 

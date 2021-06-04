@@ -1,0 +1,30 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+  <div class="main-inner__wrapper">
+    {{ content | safe }}
+    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/contact/thank-you">
+      <p class="aria-invisible">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+      <label for="name">
+        Name
+      </label>
+      <input id="name" type="text" name="name" required>
+      <label for="email">
+        Email Address
+      </label>
+      <input id="email" type="email" name="email-address" required>
+      <label for="message" required>
+        Your Message
+      </label>
+      <textarea id="message" name="message" rows="10" required></textarea>
+      <div>
+        <button type="submit" class="btn">
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
+

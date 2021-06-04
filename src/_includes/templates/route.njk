@@ -1,0 +1,21 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+  <figure>
+    <img src="/assets/images/route-hero.jpg" loading="lazy" alt="Trail running crossing Cold Brook in the Northern Presidental Range" width="2000" height="1000">
+    <figcaption>
+      <a href="https://klementovichphoto.com">
+        klementovichphoto.com
+      </a>
+    </figcaption>
+  </figure>
+
+  <div class="main-inner__wrapper">
+    {{ content | safe }}
+
+    <figure class="embed-responsive">
+      <iframe src='https://www.gaiagps.com/public/GZ18PETwFaQQL5atRs0dbFnI?embed=True' loading="lazy" class="embed-responsive-item"></iframe>
+    </figure>
+  </div>
+  
+{% endblock %}
