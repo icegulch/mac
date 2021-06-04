@@ -13,6 +13,22 @@
   <div class="main-inner__wrapper">
     {{ content | safe }}
 
+    <ol>
+      {% for segment in collections.segments | sort(false, true, 'order') %}
+        <li>
+          <h2>{{ segment.data.name }}</h2>
+          {{ segment.templateContent | safe }}
+          <ul>
+            {% for stat in segment.data.stats %}
+              <li>
+                {{ stat }}
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ol>
+
     <figure class="embed-responsive">
       <iframe src='https://www.gaiagps.com/public/GZ18PETwFaQQL5atRs0dbFnI?embed=True' loading="lazy" class="embed-responsive-item"></iframe>
     </figure>
