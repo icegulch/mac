@@ -1,0 +1,58 @@
+
+.route .main-inner ol {
+  margin-bottom: 4rem;
+  list-style: decimal inside;
+}
+
+.main-inner ol > li {
+  margin-top: 2.5rem;
+}
+
+.main-inner ol > li::marker {
+  font-family: 'Teko', sans-serif;
+  font-size: 28px;
+  color: #EA580C;
+}
+
+.main-inner ol > li > h2 {
+  display: inline-block;
+}
+
+.main-inner ol > li > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1px;
+  border-top: 1px solid #CBD5E1;
+  border-bottom: 1px solid #CBD5E1;
+  margin-top: 0.75rem;
+  text-align: center;
+  font: 300 18px/1 'sf mono', monospace;
+  background-color: #CBD5E1;
+}
+
+.main-inner ol > li > ul > li {
+  padding: 1rem 0;
+  background-color: #fff;
+}
+
+.main-inner ol > li > ul > li:after {
+  content: '';
+  display: block;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  font: 300 10px/1 var(--font_stack);
+  letter-spacing: 0.15rem;
+  color: #647488;
+}
+
+.main-inner ol > li > ul > li:first-child:after {
+  content: 'Length';
+}
+
+.main-inner ol > li > ul > li:nth-of-type(2):after {
+  content: 'Grade';
+}
+
+.main-inner ol > li > ul > li:last-child:after {
+  content: 'Change';
+}

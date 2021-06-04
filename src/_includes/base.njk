@@ -12,6 +12,17 @@
       {% include "css/font.css" %}
       {% include "css/_preflight.css" %}
       {% include "css/styles.css" %}
+      {% if page.fileSlug == 'route' %}
+        {% include "css/route.css" %}
+      {% elif page.fileSlug == 'results' %}
+        {% include "css/results.css" %}
+      {% elif page.fileSlug == 'reports-paginated' %}
+        {% include "css/reports.css" %}
+      {% elif page.fileSlug == 'contact' %}
+        {% include "css/contact.css" %}
+      {% elif page.fileSlug == 'thank-you' %}
+        {% include "css/thank-you.css" %}
+      {% endif %}
     {% endset %}
     <style>
       {{ css | cssmin | safe }}
@@ -27,7 +38,6 @@ bah
     <header id="site-header" role="banner">
       {% include "header.njk" %}
     </header>
-
     <main id="site-main" role="main">
       <div class="main-inner">
         {{ content | safe }}

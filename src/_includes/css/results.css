@@ -1,0 +1,50 @@
+
+.main-inner p {
+  margin-bottom: 2rem;
+}
+
+.main-inner details + details {
+  margin-top: 2rem;
+}
+
+.main-inner summary {
+  margin-bottom: 0.3718rem;
+  font-family: 'Teko', sans-serif;
+  font-size: 28px;
+  color: #334155;
+}
+
+.main-inner summary {
+  cursor: pointer;
+  outline: none;
+}
+
+.main-inner summary::marker, .main-inner summary::-webkit-details-marker {
+  font-size: 24px;
+  color: #EA580C;
+}
+
+.results-list {
+  font: 300 16px/1.9 'sf mono', monospace;
+}
+
+.results-list__item a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: start;
+  padding: 0.25rem 0;
+  text-decoration: none;
+  color: #334155;
+}
+
+.results-list__item:nth-child(odd) a {
+  background-color: #f1f5f9;
+}
+
+.results-list__item a:hover {
+  background-color: #FFF7ED;
+}
+
+.results-list__item span {
+  padding: 0.5rem;
+}

@@ -1,0 +1,93 @@
+
+.reports-nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 1px;
+  border-top: 1px solid #CBD5E1;
+  border-bottom: 1px solid #CBD5E1;
+  margin-bottom: 2rem;
+  text-align: center;
+  font: 300 18px/1 'sf mono', monospace;
+  background-color: #CBD5E1;
+}
+
+.reports-nav > li {
+  background-color: #fff;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+.reports-nav > li > a, .main-inner .reports-nav > li > span {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  color: #475569;
+  opacity: 0.6;
+}
+
+.main-inner .reports-nav > li > a:hover {
+  opacity: 1;
+}
+
+.main-inner .reports-nav > li > span {
+  opacity: 0.2;
+}
+
+.report-article {
+  margin-top: 2rem;
+}
+
+.report-article h1, .report-article h2, .report-article h3, .report-article h4, .report-article h5 {
+  font-weight: 600;
+}
+
+.report-article h1, .report-article h2, .report-article h3 {
+  font-size: 1.5rem;
+}
+
+.report-article h4 {
+  font-size: 1.3rem;
+}
+
+.report-article h5 {
+  font-size: 1.1;
+}
+
+.report-article h6 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.report-article * {
+  margin-bottom: 1.25rem;
+}
+
+.report-article img {
+  margin: 2rem auto;
+}
+
+.report-article blockquote {
+  margin: 3rem 2rem;
+  padding-left: 2rem;
+  border-left: 3px solid #E2E8F0;
+  font: italic 21px/1.4 georgia, serif;
+}
+
+/* No sprawling links */
+.report-article a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

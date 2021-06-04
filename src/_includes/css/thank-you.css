@@ -1,0 +1,6 @@
+
+.thank-you .main-inner h2:before {
+  content: '\2665';
+  margin-right: 0.5rem;
+  color: #EA580C;
+}
