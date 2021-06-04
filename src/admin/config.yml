@@ -17,7 +17,7 @@ collections:
       - name: home
         label: Homepage
         delete: false
-        file: src/about.md
+        file: src/pages/about.md
         slug: '{{slug}}'
         fields:
           - label: Layout
@@ -38,7 +38,7 @@ collections:
       - name: route
         label: Route
         delete: false
-        file: src/route.md
+        file: src/pages/route.md
         slug: '{{slug}}'
         fields:
           - label: Layout
