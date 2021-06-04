@@ -33,8 +33,9 @@ collections:
         required: true
       - label: Run Date
         name: run_date
-        widget: date
+        widget: datetime
         date_format: "YYYY-MM-DD"
+        time_format: false
         format: "YYYY-MM-DD"
         picker_utc: true
         default: ''
