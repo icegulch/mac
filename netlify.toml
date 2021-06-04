@@ -13,7 +13,7 @@
   framework = "#custom"
   publish = "public"
   port = 3000
-  targetPort = 8181
+  targetPort = 8080
   NODE_ENV = "development"
   # functionsPort = 34567
 
