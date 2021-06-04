@@ -56,6 +56,90 @@ collections:
           - label: Body
             name: body
             widget: markdown
+      - name: results
+        label: Results
+        delete: false
+        file: src/pages/results.md
+        slug: '{{slug}}'
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: templates/results.njk
+          - label: Title
+            name: title
+            widget: hidden
+            default: Results
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /results/
+          - label: Body
+            name: body
+            widget: markdown
+      - name: contact
+        label: Contact
+        delete: false
+        file: src/pages/contact.md
+        slug: '{{slug}}'
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: templates/contact.njk
+          - label: Title
+            name: title
+            widget: hidden
+            default: Contact
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /contact/
+          - label: Body
+            name: body
+            widget: markdown
+      - name: thank-you
+        label: Thank You
+        delete: false
+        file: src/pages/thank-you.md
+        slug: '{{slug}}'
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: templates/thank-you.njk
+          - label: Title
+            name: title
+            widget: hidden
+            default: Thank You
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /contact/thank-you/
+          - label: Body
+            name: body
+            widget: markdown
+      - name: error-404
+        label: Error (404)
+        delete: false
+        file: src/pages/404.md
+        slug: '{{slug}}'
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: templates/404.njk
+          - label: Title
+            name: title
+            widget: hidden
+            default: Contact
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /404.html
+          - label: Body
+            name: body
+            widget: markdown
 
 
   - name: "results"
