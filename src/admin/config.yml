@@ -7,7 +7,7 @@ local_backend: true
 media_folder: "/src/assets/images/uploads/"
 public_folder: "/assets/images/uploads/"
 site_url: "https://www.mountadamschallenge.org/"
-display_url: "https://www.mountadamschallenge.org"
+display_url: "https://mountadamschallenge.org"
 collections:
 
   - name: "results"
