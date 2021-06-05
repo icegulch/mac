@@ -54,7 +54,8 @@
           var image = entry.getIn(['data', 'image']);
           var bg = this.props.getAsset(image);
           return h('div', {"className": "main-inner"},
-            h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body'))
+            h('div', {"className": "main-inner__wrapper"},
+              h('article', {}, this.props.widgetFor('body')))
           );
         }
       });
