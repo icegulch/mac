@@ -22,6 +22,7 @@ collections:
         delete: false
         file: src/pages/about.md
         slug: '{{slug}}'
+        preview_path: /
         fields:
           - label: Layout
             name: layout
@@ -46,6 +47,7 @@ collections:
         delete: false
         file: src/pages/route.md
         slug: '{{slug}}'
+        preview_path: /
         fields:
           - label: Layout
             name: layout
@@ -73,6 +75,7 @@ collections:
             collapsed: true
             add_to_top: true
             summary: '{{fields.name}}'
+            preview_path: /route/
             fields:
               - label: Segment Name
                 name: name
@@ -99,6 +102,7 @@ collections:
         delete: false
         file: src/pages/results.md
         slug: '{{slug}}'
+        preview_path: /results/
         fields:
           - label: Layout
             name: layout
@@ -123,6 +127,7 @@ collections:
         delete: false
         file: src/pages/contact.md
         slug: '{{slug}}'
+        preview_path: /contact/
         fields:
           - label: Layout
             name: layout
@@ -147,6 +152,7 @@ collections:
         delete: false
         file: src/pages/thank-you.md
         slug: '{{slug}}'
+        preview_path: /contact/thank-you/
         fields:
           - label: Layout
             name: layout
@@ -171,6 +177,7 @@ collections:
         delete: false
         file: src/pages/404.md
         slug: '{{slug}}'
+        preview_path: /404.html
         fields:
           - label: Layout
             name: layout
