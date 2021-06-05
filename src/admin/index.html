@@ -59,7 +59,7 @@
         }
       });
 
-      var PagesPreview = createClass({
+      var AboutPreview = createClass({
         render: function() {
           var entry = this.props.entry;
           var image = entry.getIn(['data', 'image']);
@@ -71,7 +71,7 @@
       });
 
       CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
-      CMS.registerPreviewTemplate('pages', PagesPreview);
+      CMS.registerPreviewTemplate('about', AboutPreview);
 
       CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
 
