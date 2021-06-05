@@ -5,7 +5,7 @@ run_duration = "2:01:45"
 year = 2020
 date = 2020-06-19T00:00:00.000Z
 ---
-<img src="/assets/images/uploads/2020-06-19scott-gordon.jpg" alt="Scott Gordon's Seventh: Summit Photo" width="640" height="480" class="img-fluid">
+<img src="/assets/images/uploads/2020-06-19scott-gordon.jpg" alt="Scott Gordon's Seventh: Summit Photo" width="640" height="480">
 
 I'm reporting a successful MAC attempt on June 19, 2020.
 
@@ -16,5 +16,5 @@ Real hot for the first two miles, then good. The Brookside has had some improvem
 
 Thank you. This is one of my favorite days yearly. #7.
 
-<img src="/assets/images/uploads/2020-06-19scott-gordon.png" alt="Scott's Stopwatch Reading" width="360" height="640" class="img-fluid">
+<img src="/assets/images/uploads/2020-06-19scott-gordon.png" alt="Scott's Stopwatch Reading" width="360" height="640">
 

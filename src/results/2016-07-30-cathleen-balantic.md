@@ -5,7 +5,7 @@ run_duration = "2:00:37"
 year = 2016
 date = 2016-07-30T00:00:00.000Z
 ---
-<img src="/assets/images/uploads/balantic-summit.jpg" alt="Cathleen's Watch at the Summit Sign" width="1280" height="956" class="img-fluid">
+<img src="/assets/images/uploads/balantic-summit.jpg" alt="Cathleen's Watch at the Summit Sign" width="1280" height="956">
 
 Beautiful day out there today – sunny and clear, no bugs, dry rocks, low humidity. My only major navigational mishap was early on in the game after turning onto the Brookside Trail. I continued down the trail and soon found myself staring befuddled at a fork in the path with a sign for Edmands Col and no more evident signage for Brookside... I picked the incorrect fork and somehow wound up back on Valley Way. Nnnnoooooo! I semi-panicked, backtracked to the beginning of Brookside, spent some time looking at the map, and ultimately managed to correct my mistake (though I wasn't confident about it at the time). Only lost ~5.5 minutes with all of this, but it felt like an eternity as I anxiously consulted the map and made some educated guesses. I pouted and cursed my poor navigational skills, feeling spooked for the next stretch until I successfully hooked the right onto Watson Path. A pair of hikers had paused for a break directly at the trailhead, but I probably would have scooted directly by them and the turn if I hadn't paused for a quick chat and map check. I managed to stay on the right track from Watson-to-Scar (taking care not to hang a wrong turn onto Valley Way again...), and loved my time on the Scar trail segment as I felt some of my earlier route-induced stress recede.
 
@@ -19,6 +19,6 @@ Cathleen Balantic
 
 Burlington VT &amp; Center Conway NH
 
-<img src="/assets/images/uploads/balantic-th.jpg" alt="Cathleen's Watch at Appalachia" width="1280" height="1714" class="img-fluid">
+<img src="/assets/images/uploads/balantic-th.jpg" alt="Cathleen's Watch at Appalachia" width="1280" height="1714">
 
 

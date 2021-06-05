@@ -38,6 +38,11 @@
   opacity: 0.2;
 }
 
+.report-stats {
+  display: grid;
+  grid-template-columns: minmax(3.25em, auto) 1fr;
+}
+
 .report-article {
   margin-top: 2rem;
 }

@@ -5,7 +5,7 @@ run_duration = "1:47:04"
 year = 2014
 date = 2014-08-29T00:00:00.000Z
 ---
-<img src="/assets/images/uploads/charlie-and-amy-summit.jpg" alt="Amy and Charlie at the Summit" width="500" height="281" class="img-fluid">
+<img src="/assets/images/uploads/charlie-and-amy-summit.jpg" alt="Amy and Charlie at the Summit" width="500" height="281">
 
 <em>Editor's note: Congratulations to Amy and Charlie Gunn, for giving the Mount Adams Challenge a try! Amy, we hope you'll give it a go again. A beer and cappuccino await you!</em>
 
@@ -21,9 +21,9 @@ I followed Odd, feeling very well the first mile and we flew up Brookside. Odd b
 
 The sight of the cairn at Thunderstorm junction made me know that I was just a few tenths from the summit and I might just make it. I pushed harder and managed to jump from rock to rock to the top. I stopped my watch and since my eyesight isn't so great it took me a moment to focus and see that I had made it with a whole minute and fifteen seconds to spare, 2:08:45!  I almost burst into tears of joy! Then, in just a few minutes, Odd was here with me and his watch read 1:39 something! Yeah. Soon Charlie arrived too!
 
-<img src="/assets/images/uploads/amy-watch-summit.jpg" alt="Amy's Watch at the Summit Sign" width="500" height="281" class="img-fluid">
+<img src="/assets/images/uploads/amy-watch-summit.jpg" alt="Amy's Watch at the Summit Sign" width="500" height="281">
 
-<img src="/assets/images/uploads/charlie-watch-summit.jpg" alt="Charlie's Watch at the Summit Sign" width="500" height="373" class="img-fluid">
+<img src="/assets/images/uploads/charlie-watch-summit.jpg" alt="Charlie's Watch at the Summit Sign" width="500" height="373">
 
 <strong>Charlie:</strong> Amy and Odd were on top cheering for me! I felt good and tired. At the summit sign I had some difficulty turning off the goofy watch Amy had loaned me (I had forgot my own watch at home).  I had made it in 1:46-something, but I stopped my watch at 1:47:04!
 

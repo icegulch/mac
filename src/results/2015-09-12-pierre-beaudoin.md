@@ -5,7 +5,7 @@ run_duration = "1:58:51"
 year = 2015
 date = 2015-09-12T00:00:00.000Z
 ---
-<img src="/assets/images/uploads/beaudoin-trail.jpg" alt="The Course Is Not For the Weak-Kneed" width="1080" height="1920" class="img-fluid">
+<img src="/assets/images/uploads/beaudoin-trail.jpg" alt="The Course Is Not For the Weak-Kneed" width="1080" height="1920">
 
 I woke up late at Moose Brook State Park— there was no rush, as the temperature was  perfect and it was not going to be hot… so no need to get up at 5 am. Curiously, there were not so many people at this nice campground— maybe the Canadian dollar value was not helping?
 
@@ -29,7 +29,7 @@ In fact, I was much less confident. There was a lot left, and it was climbing on
 
 The last section was better than I thought, though, and I got to the summit just before two hours.
 
-<img src="/assets/images/uploads/beaudoin-watch.jpg" alt="Pierre's Watch at the Summit Sign" width="1280" height="720" class="img-fluid">
+<img src="/assets/images/uploads/beaudoin-watch.jpg" alt="Pierre's Watch at the Summit Sign" width="1280" height="720">
 
 There were just five people on the summit, including two other “frenchies,” so I asked them for a suggestion as to which way to go down. They suggested Airine, but I had already been that way, so I headed for Madison hut. On the descent, I remember how downhills can hurt your knees. I got to Madison Hut, and realized Madison summit will have to wait for the next trip!
 
@@ -42,6 +42,6 @@ It was great to have done this challenge. Thank you so much. It was very fun, an
 Pierre Beaudoin
 St-Mathieu-du-parc, Québec, Canada
 
-<img src="/assets/images/uploads/beaudoin-moat.jpg" alt="Dreams Come True at Saalt Pub" width="1080" height="1920" class="img-fluid">
+<img src="/assets/images/uploads/beaudoin-moat.jpg" alt="Dreams Come True at Saalt Pub" width="1080" height="1920">
 
 

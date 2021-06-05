@@ -5,7 +5,7 @@ run_duration = "1:54:51 "
 year = 2020
 date = 2020-07-03T00:00:00.000Z
 ---
-<img src="/assets/images/uploads/fargo.jpg" width="360" height="640" alt="Richard shows off his finishing time at the summit" class="img-fluid">
+<img src="/assets/images/uploads/fargo.jpg" width="360" height="640" alt="Richard shows off his finishing time at the summit">
 
 I just did the Mt Adams challenge, and really enjoyed it.
 

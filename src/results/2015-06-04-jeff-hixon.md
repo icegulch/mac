@@ -6,7 +6,7 @@ year = 2015
 date = 2015-06-04T00:00:00.000Z
 other_runners = ["Andy Kernytsky", "Kevin Marks"]
 ---
-<img src="/assets/images/uploads/jeff-kevin-andy-summit.jpg" alt="Jeff, Kevin, and Andy at the Summit Sign" width="500" height="281" class="img-fluid">
+<img src="/assets/images/uploads/jeff-kevin-andy-summit.jpg" alt="Jeff, Kevin, and Andy at the Summit Sign" width="500" height="281">
 
 On June 4th, three of us attempted the Mt Adams vertical challenge as part of a larger vertical training day: Andy Kernytsky, Kevin Marks, and myself, Jeff Hixon made the trek. Here's our story:
 
@@ -19,4 +19,4 @@ Thanks for doing this, it was a great time and provided us a little extra motiva
 Best,
 Jeff, on behalf of Kevin and Andy as well
 
-<img src="/assets/images/uploads/jeff-kevin-andy-strava.jpg" alt="Jeff, Kevin, and Andy's Strava" width="500" height="373" class="img-fluid">
+<img src="/assets/images/uploads/jeff-kevin-andy-strava.jpg" alt="Jeff, Kevin, and Andy's Strava" width="500" height="373">

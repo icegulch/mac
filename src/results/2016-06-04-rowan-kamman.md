@@ -5,7 +5,7 @@ run_duration = "1:35:24"
 year = 2016
 date = 2016-06-04T00:00:00.000Z
 ---
-<img src="/assets/images/uploads/kamman-2016.jpg" alt="Rowan's Watch at the Summit Sign" width="1280" height="720" class="img-fluid">
+<img src="/assets/images/uploads/kamman-2016.jpg" alt="Rowan's Watch at the Summit Sign" width="1280" height="720">
 
 I did the Mt. Adams challenge today, June 4, 2016. What a nice day… summits in the clear and views far into Maine and even Vermont. My time was 1:35:24; I included a picture from either side of the summit sign just in case! It was a real leg and lung buster but I especially enjoyed how the route showcased a little bit of everything that the Whites have to offer.
 

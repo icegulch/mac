@@ -54,20 +54,25 @@ eleventyComputed:
     <h1>
       {{ report.data.name }}'s MAC Report
     </h1>
-    <time>{{ report.data.run_date | postDate }}</time>
-    <p>Result: {{ report.data.run_duration }}</p>
+    <dl class="report-stats">
+      <dt>Date:</dt>
+      <dd><time>{{ report.data.run_date | postDate }}</time></dd>
+    </dl>
+    <dl class="report-stats">
+      <dt>Time:</dt>
+      <dd>{{ report.data.run_duration }}</dd>
+    </dl>
+    <dl class="report-stats">
+      <dt>Style:</dt>
+      <dd>{{ ' With' if report.data.other_runners.length else 'Solo' }}
     {% if report.data.other_runners.length %}
-      <ul>
-        {% set main_run_date = report.data.run_date %}
-        {% for runner in report.data.other_runners %}
-          <li>
-            <a href="/results/{{ main_run_date | htmlDateString | slugify }}-{{ runner | slugify }}/">
-              {{ runner }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+      {% set main_run_date = report.data.run_date %}
+      {% for runner in report.data.other_runners %}
+        <a href="/results/{{ main_run_date | htmlDateString | slugify }}-{{ runner | slugify }}/">{{ runner }}</a>{{ ', ' if not loop.last }}
+      {% endfor %}
     {% endif %}
+      </dd>
+    </dl>
 
     <article class="report-article">
       {{ report.templateContent | safe }}
