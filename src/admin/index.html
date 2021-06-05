@@ -48,21 +48,20 @@
         },
       };
 
-      var PagePreview = createClass({
+      var ResultPreview = createClass({
         render: function() {
           var entry = this.props.entry;
-          return h(
-            'div',
-            {},
-            h('div', { className: 'main-inner__wrapper' }, h('h1', {}, entry.getIn(['data', 'title']))),
-            h('p', {}, h('small', {}, 'Written ' + entry.getIn(['data', 'date']))),
-            h('div', { className: 'text' }, this.props.widgetFor('body')),
+          var image = entry.getIn(['data', 'image']);
+          var bg = this.props.getAsset(image);
+          return h('div', h('div', { className: 'main-inner__wrapper' }, h('h1', {}, entry.getIn(['data', 'title']))),
+            // h('img', {src: bg.toString()}),
+            h('div', {"className": "text"}, this.props.widgetFor('body'))
           );
-        },
+        }
       });
 
-      CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
-      CMS.registerPreviewTemplate('about', PagePreview);
+      CMS.registerPreviewStyle("assets/css/styles.css", { raw: true });
+      CMS.registerPreviewTemplate('results', ResultPreview);
 
       CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
 
