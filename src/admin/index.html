@@ -77,10 +77,40 @@
         }
       });
 
+      var ContactPreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          return h('div', {"className": "main-inner"},
+            h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body'))
+          );
+        }
+      });
+
+      var ThankYouPreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          return h('div', {"className": "main-inner"},
+            h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body'))
+          );
+        }
+      });
+
+      var ErrorPreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          return h('div', {"className": "main-inner"},
+            h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body'))
+          );
+        }
+      });
+
       CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
       CMS.registerPreviewTemplate('results', ResultsPreview);
       CMS.registerPreviewTemplate('home', HomePreview);
       CMS.registerPreviewTemplate('route', RoutePreview);
+      CMS.registerPreviewTemplate('contact', ContactPreview);
+      CMS.registerPreviewTemplate('thank-you', ThankYouPreview);
+      CMS.registerPreviewTemplate('thank-you', ErrorPreview);
 
       CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
 
