@@ -47,7 +47,7 @@ collections:
         delete: false
         file: src/pages/route.md
         slug: '{{slug}}'
-        preview_path: /
+        preview_path: /route/
         fields:
           - label: Layout
             name: layout
