@@ -38,6 +38,8 @@ collections:
           - label: Body
             name: body
             widget: markdown
+            buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
+            editor_components: ['image']
       - name: route
         label: Route
         delete: false
@@ -59,6 +61,8 @@ collections:
           - label: Body
             name: body
             widget: markdown
+            buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
+            editor_components: ['image']
       - name: results
         label: Results
         delete: false
@@ -80,6 +84,8 @@ collections:
           - label: Body
             name: body
             widget: markdown
+            buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
+            editor_components: ['image']
       - name: contact
         label: Contact
         delete: false
@@ -101,6 +107,8 @@ collections:
           - label: Body
             name: body
             widget: markdown
+            buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
+            editor_components: ['image']
       - name: thank-you
         label: Thank You
         delete: false
@@ -122,6 +130,9 @@ collections:
           - label: Body
             name: body
             widget: markdown
+            buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
+            editor_components: ['image']
+
       - name: error-404
         label: Error (404)
         delete: false
@@ -143,6 +154,8 @@ collections:
           - label: Body
             name: body
             widget: markdown
+            buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
+            editor_components: ['image']
 
 
   - name: "results"
