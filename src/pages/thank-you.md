@@ -5,4 +5,4 @@ permalink: /contact/thank-you/
 ---
 # Thank You!
 
-Thanks for your interest in this personal challenge! We'll post your result or reply to your query ASAP.
+Thanks for your interest in this personal challenge! We'll post your result or reply to your inquiry ASAP.

@@ -101,6 +101,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .main-inner h1 {
+    transform: skew(-10deg) translateX(-25px);
+  }
+}
+
 
 
 /* NAV */

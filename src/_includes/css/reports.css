@@ -42,28 +42,6 @@
   margin-top: 2rem;
 }
 
-.report-article h1, .report-article h2, .report-article h3, .report-article h4, .report-article h5 {
-  font-weight: 600;
-}
-
-.report-article h1, .report-article h2, .report-article h3 {
-  font-size: 1.5rem;
-}
-
-.report-article h4 {
-  font-size: 1.3rem;
-}
-
-.report-article h5 {
-  font-size: 1.1;
-}
-
-.report-article h6 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-}
-
 .report-article * {
   margin-bottom: 1.25rem;
 }
