@@ -59,8 +59,19 @@
         }
       });
 
+      var PagesPreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          var image = entry.getIn(['data', 'image']);
+          var bg = this.props.getAsset(image);
+          return h('div', {"className": "main-inner"},
+            h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body'))
+          );
+        }
+      });
+
       CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
-      CMS.registerPreviewTemplate('results', ResultsPreview);
+      CMS.registerPreviewTemplate('pages', PagesPreview);
 
       CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
 
