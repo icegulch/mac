@@ -54,15 +54,15 @@ eleventyComputed:
     <h1>
       {{ report.data.name }}'s MAC Report
     </h1>
-    <dl class="report-stats">
+    <dl>
       <dt>Date:</dt>
       <dd><time>{{ report.data.run_date | postDate }}</time></dd>
     </dl>
-    <dl class="report-stats">
+    <dl>
       <dt>Time:</dt>
       <dd>{{ report.data.run_duration }}</dd>
     </dl>
-    <dl class="report-stats">
+    <dl>
       <dt>Style:</dt>
       <dd>{{ ' With' if report.data.other_runners.length else 'Solo' }}
     {% if report.data.other_runners.length %}
@@ -74,7 +74,7 @@ eleventyComputed:
       </dd>
     </dl>
 
-    <article class="report-article">
+    <article>
       {{ report.templateContent | safe }}
     </article>
   </div>

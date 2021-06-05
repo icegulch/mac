@@ -38,24 +38,24 @@
   opacity: 0.2;
 }
 
-.report-stats {
+.main-inner dl {
   display: grid;
   grid-template-columns: minmax(3.25em, auto) 1fr;
 }
 
-.report-article {
+.main-inner article {
   margin-top: 2rem;
 }
 
-.report-article * {
+.main-inner article * {
   margin-bottom: 1.25rem;
 }
 
-.report-article img {
+.main-inner article img {
   margin: 2rem auto;
 }
 
-.report-article blockquote {
+.main-inner article blockquote {
   margin: 3rem 2rem;
   padding-left: 2rem;
   border-left: 3px solid #E2E8F0;
@@ -63,7 +63,7 @@
 }
 
 /* No sprawling links */
-.report-article a {
+.main-inner article a {
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
