@@ -44,7 +44,7 @@ body {
 }
 
 .main-inner {
-  padding: 40px 20px 80px;
+  padding: 50px 20px 80px;
   background-color: #fff;
   color: #475569;
 }
@@ -92,18 +92,12 @@ body {
   .main-inner {
     width: 100%;
     max-width: 960px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   #site-footer {
     background-color: transparent;
     background-image: none;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .main-inner h1 {
-    transform: skew(-10deg) translateX(-25px);
   }
 }
 
@@ -144,10 +138,16 @@ body {
 }
 
 .main-inner h1 {
-  margin-bottom: 0.6282rem;
-  font-family: 'Teko', sans-serif;
-  font-size: 36px;
+  transform: skew(-10deg);
+  margin-bottom: 1rem;
+  font: 36px/1 'Teko', sans-serif;
   color: #EA580C;
+}
+
+@media (min-width: 1125px), (min-width: 700px) and (max-width: 991px) {
+  .main-inner h1 {
+    transform: skew(-10deg) translateX(-25px);
+  }
 }
 
 .main-inner h2 {
