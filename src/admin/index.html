@@ -58,7 +58,23 @@
           }
         },
       });
+
       CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
+
+      var PagePreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          return h(
+            'div',
+            {},
+            h('div', { className: 'main-inner__wrapper' }, h('h1', {}, entry.getIn(['data', 'title']))),
+            h('p', {}, h('small', {}, 'Written ' + entry.getIn(['data', 'date']))),
+            h('div', { className: 'text' }, this.props.widgetFor('body')),
+          );
+        },
+      });
+
+      CMS.registerPreviewTemplate('pages', PagePreview);
     </script>
   </body>
 </html>
