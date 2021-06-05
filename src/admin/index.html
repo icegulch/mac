@@ -48,21 +48,21 @@
         },
       };
 
-      var ResultPreview = createClass({
+      var ResultsPreview = createClass({
         render: function() {
           var entry = this.props.entry;
           var image = entry.getIn(['data', 'image']);
           var bg = this.props.getAsset(image);
-          return h('div', {},
+          return h('div', {"className": "main-inner__wrapper"},
             h('h1', {}, entry.getIn(['data', 'title'])),
-            h('img', {src: bg.toString()}),
+            // h('img', {src: bg.toString()}),
             h('div', {"className": "text"}, this.props.widgetFor('body'))
           );
         }
       });
 
-      CMS.registerPreviewStyle("../assets/css/styles.css", { raw: true });
-      CMS.registerPreviewTemplate('results', ResultPreview);
+      CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
+      CMS.registerPreviewTemplate('results', ResultsPreview);
 
       CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
 
