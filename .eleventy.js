@@ -9,9 +9,6 @@ const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
 
-  // Shorthand
-  eleventyConfig.addLayoutAlias('base', 'base.njk');
-
   // A useful way to reference the context we are runing eleventy in
   let env = process.env.ELEVENTY_ENV;
 

@@ -19,9 +19,11 @@
     "image-size": "^1.0.0",
     "javascript-stringify": "^2.1.0",
     "js-yaml": "^3.14.1",
+    "jsdom": "^16.6.0",
     "lodash": "^4.17.21",
     "luxon": "^1.26.0",
     "node-fetch": "^2.6.1",
+    "sharp": "^0.28.3",
     "toml": "^3.0.0"
   }
 }

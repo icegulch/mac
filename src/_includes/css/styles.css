@@ -64,15 +64,16 @@ body {
   /* background by SVGBackgrounds.com */
 }
 
-#site-footer a {
-  text-decoration: underline;
-}
-
 #site-footer #MAC_logo {
-  display: inline-block;
+  display: block;
+  margin: 0 auto 15px;
   fill: #fff;
   max-width: 150px;
   height: auto;
+}
+
+#site-footer a {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 992px) {
