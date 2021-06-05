@@ -3,14 +3,6 @@ layout: templates/route.njk
 title: Route
 permalink: /route/
 segments:
-  - name: Brookside
-    stats:
-      - 1.7mi
-      - 15%
-      - + 1350ft
-    body: Run Brookside to Watson Path, turn right on Watson Path. **Watch for the
-      turn off from Brookside to Watson Path very closely. It comes in at a
-      shallow angle and is very easy to miss!**
   - name: Valley Way
     stats:
       - 0.9mi
@@ -19,6 +11,14 @@ segments:
     body: Start with one hand on the kiosk at Appalachia. Set a stop watch to zero
       and start it running! Run up Valley Way to the junction with Brookside.
       Turn left on Brookside.
+  - name: Brookside
+    stats:
+      - 1.7mi
+      - 15%
+      - + 1350ft
+    body: Run Brookside to Watson Path, turn right on Watson Path. **Watch for the
+      turn off from Brookside to Watson Path very closely. It comes in at a
+      shallow angle and is very easy to miss!**
 ---
 # The Route
 
