@@ -121,6 +121,7 @@ collections:
             widget: markdown
             buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
             editor_components: ['image']
+            minimal: true
 
       - name: contact
         label: Contact
@@ -146,6 +147,7 @@ collections:
             widget: markdown
             buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
             editor_components: ['image']
+            minimal: true
 
       - name: thank-you
         label: Thank You
@@ -171,6 +173,7 @@ collections:
             widget: markdown
             buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
             editor_components: ['image']
+            minimal: true
 
       - name: error-404
         label: Error (404)
@@ -196,6 +199,7 @@ collections:
             widget: markdown
             buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
             editor_components: ['image']
+            minimal: true
 
 
   - name: "results"
