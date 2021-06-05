@@ -40,6 +40,7 @@ collections:
             widget: markdown
             buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
             editor_components: ['image']
+
       - name: route
         label: Route
         delete: false
@@ -58,11 +59,40 @@ collections:
             name: permalink
             widget: hidden
             default: /route/
+          - label: Segments
+            label_singular: Segment
+            name: segments
+            widget: list
+            allow_add: true
+            collapsed: true
+            add_to_top: true
+            summary: {{field.name}}
+            fields:
+              - label: Segment Name
+                name: name
+                widget: string
+                hint: "Trail name"
+                required: true
+              - label: Segment Stats
+                name: stats
+                widget: array
+                hint: "Segment stats shorthand: Distance, Grade, Elevation Change."
+                required: true
+              - label: Segment Description
+                name: body
+                widget: markdown
+                minimal: true
+                buttons: ['bold', 'italic', 'link']
+                editor_components: []
+                modes: [rich_text]
+                required: true
+                hint: Short description of the segment.
           - label: Body
             name: body
             widget: markdown
             buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
             editor_components: ['image']
+
       - name: results
         label: Results
         delete: false
@@ -86,6 +116,7 @@ collections:
             widget: markdown
             buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
             editor_components: ['image']
+
       - name: contact
         label: Contact
         delete: false
@@ -109,6 +140,7 @@ collections:
             widget: markdown
             buttons: ['bold', 'italic', 'link', 'heading-three', 'heading-four', 'heading-five', 'heading-six', 'quote', 'bulleted-list', 'numbered-list']
             editor_components: ['image']
+
       - name: thank-you
         label: Thank You
         delete: false
