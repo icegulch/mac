@@ -19,6 +19,24 @@
   }
 }
 
+.main-inner__wrapper {
+  max-width: 610px;
+  margin: 0 auto;
+}
+
+.main-inner h1 {
+  transform: skew(-10deg);
+  margin-bottom: 2rem;
+  font: 36px/1 'Teko', sans-serif;
+  color: #EA580C;
+}
+
+@media (min-width: 1125px), (min-width: 700px) and (max-width: 991px) {
+  .main-inner h1 {
+    transform: skew(-10deg) translateX(-25px);
+  }
+}
+
 .main-inner h2 {
   margin-bottom: 0.3718rem;
   font-family: 'Teko', sans-serif;
