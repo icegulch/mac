@@ -13,7 +13,7 @@ Based on the [Leukerbads 70 minute dash](http://runthealps.com/blog/leukerbads-7
 
 ## The Reward
 
-[SAalt Pub](https://www.libbysbistro.org/) will congratulate you with the beverage of your choice and a very cool certificate courtesy of Borealchick Designs. But before we can, you’ll need to [contact us](/contact/). See below for the full scoop!
+[SAalt Pub](https://www.libbysbistro.org/) will congratulate you with the beverage of your choice and a very cool certificate courtesy of [Borealchick Designs](https://kellishedd.carbonmade.com/). But before we can, you’ll need to [contact us](/contact/). See below for the full scoop!
 
 ## The Rules
 
