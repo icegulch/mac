@@ -17,7 +17,7 @@
       {% for segment in segments %}
         <li>
           <h2>{{ segment.name }}</h2>
-          {{ segment.content | safe }}
+          {{ segment.body | renderUsingMarkdown | safe }}
           <ul>
             {% for stat in segment.stats %}
               <li>
