@@ -5,9 +5,11 @@ permalink: /
 ---
 # The Mount Adams Challenge
 
+## The Point
+
 Reach the summit of Mount Adams via the designated route in under 2h10.
 
-## The Point
+## The Inspiration
 
 Based on the [Leukerbads 70 minute dash](http://runthealps.com/blog/leukerbads-70-minute-dash), the Mount Adams Challenge is an entirely informal event to be undertaken by individuals seeking a personal challenge. It is not a race. Do it in a low-key, fun way on a schedule that works for you.
 
