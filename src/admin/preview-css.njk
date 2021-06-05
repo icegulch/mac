@@ -1,0 +1,13 @@
+---
+permalink: /assets/css/styles.css
+---
+{% set css %}
+  {% include "css/_preflight.css" %}
+  {% include "css/font.css" %}
+  {% include "css/reports.css" %}
+  {% include "css/results.css" %}
+  {% include "css/route.css" %}
+  {% include "css/contact.css" %}
+  {% include "css/thank-you.css" %}
+{% endset %}
+{{ css | cssmin | safe }}
