@@ -8,6 +8,7 @@ media_folder: "/src/assets/images/uploads/"
 public_folder: "/assets/images/uploads/"
 site_url: "https://www.mountadamschallenge.org/"
 display_url: "https://www.mountadamschallenge.org"
+publish_mode: editorial_workflow
 collections:
 
   - name: pages
