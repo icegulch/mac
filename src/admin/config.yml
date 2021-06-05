@@ -13,6 +13,9 @@ collections:
   - name: pages
     label: Pages
     label_singular: Page
+    editor:
+      preview: false
+    description: "Where you can update the various bits of copy around the site."
     files:
       - name: home
         label: Homepage

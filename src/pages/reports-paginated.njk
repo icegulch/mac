@@ -51,9 +51,9 @@ eleventyComputed:
   </nav>
 
   <div class="main-inner__wrapper">
-    <h2>
+    <h1>
       {{ report.data.name }}'s MAC Report
-    </h2>
+    </h1>
     <time>{{ report.data.run_date | postDate }}</time>
     <p>Result: {{ report.data.run_duration }}</p>
     {% if report.data.other_runners.length %}

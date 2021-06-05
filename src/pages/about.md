@@ -3,7 +3,7 @@ layout: templates/about.njk
 title: About
 permalink: /
 ---
-## The Challenge
+# The Challenge
 
 Reach the summit of Mount Adams via the designated route in under 2h10.
 

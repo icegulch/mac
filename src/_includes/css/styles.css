@@ -137,11 +137,40 @@ body {
   margin: 0 auto;
 }
 
+.main-inner h1 {
+  margin-bottom: 0.3718rem;
+  font-family: 'Teko', sans-serif;
+  font-size: 36px;
+  color: #EA580C;
+}
+
 .main-inner h2 {
   margin-bottom: 0.3718rem;
   font-family: 'Teko', sans-serif;
   font-size: 28px;
   color: #334155;
+}
+
+.main-inner h3, .main-inner h4, .main-inner h5 {
+  font-weight: 600;
+}
+
+.main-inner h3 {
+  font-size: 1.5rem;
+}
+
+.main-inner h4 {
+  font-size: 1.3rem;
+}
+
+.main-inner h5 {
+  font-size: 1.1;
+}
+
+.main-inner h6 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }
 
 .main-inner p + p {
