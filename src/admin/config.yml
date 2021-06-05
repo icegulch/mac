@@ -277,6 +277,24 @@ collections:
           preview: false
         file: "src/_data/site_meta.json"
         fields:
-          - {label: "Site Title", name: "title", widget: "string", hint: "Text that appears in search results, when shared on social media, etc."}
-          - {label: "Site Description", name: "description", widget: "text", hint: "Text that appears below title in search results and sometimes on social media. Google truncates around 160 characters.", pattern: ['.{1,160}', "Should be 160 characters or less."]}
-          - {label: "Site Url", name: "url", widget: "string"}
+          - label: Site Title
+            name: title
+            widget: string
+            hint: 'Text that appears in search results, when shared on social media, etc.'
+          - label: Site Description
+            name: description
+            widget: text
+            hint: >-
+              Text that appears below title in search results and sometimes on social
+              media. Google truncates around 160 characters.
+            pattern:
+              - '.{1,160}'
+              - Should be 160 characters or less.
+          - label: Site Url
+            name: url
+            widget: string
+          - label: Social Share Image
+            name: og_img
+            widget: image
+            allow_multiple: false
+

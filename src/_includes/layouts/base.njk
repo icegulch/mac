@@ -8,6 +8,8 @@
     </title>
     <meta name="description" content="{{ site_meta.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "partials/og.njk" %}
+    {% include "partials/icons.njk" %}
     {% set css %}
       {% include "css/font.css" %}
       {% include "css/_preflight.css" %}
@@ -27,12 +29,11 @@
     <style>
       {{ css | cssmin | safe }}
     </style>
-
   </head>
   <body class="{{ title | slugify }}">
 
     <header id="site-header" role="banner">
-      {% include "layouts/header.njk" %}
+      {% include "partials/header.njk" %}
     </header>
 
     <main id="site-main" role="main">
@@ -43,7 +44,7 @@
     </main>
 
     <footer id="site-footer" role="contentinfo">
-      {% include "layouts/footer.njk" %}
+      {% include "partials/footer.njk" %}
     </footer>
 
   </body>

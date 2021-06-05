@@ -1,0 +1,6 @@
+
+<meta property="og:site_name" content="{{ site_meta.title }}">
+<meta property="og:url" content="{{ site_meta.url }}{{ page.url if page.url | slugify }}">
+<meta property="og:title" content="{{ title + ' | ' + site_meta.title }}">
+<meta property="og:description" content="{{ site_meta.description }}">
+<meta property="og:image" content="{{ site_meta.url + site_meta.og_img }}">
