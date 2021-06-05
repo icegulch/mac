@@ -66,7 +66,7 @@ collections:
             allow_add: true
             collapsed: true
             add_to_top: true
-            summary: {{field.name}}
+            summary: '{{field.name}}'
             fields:
               - label: Segment Name
                 name: name
@@ -252,44 +252,44 @@ collections:
         field: date
         pattern: \d{4}
 
-  - name: "segments" # Used in routes, e.g., /admin/collections/blog
-    identifier_field: "name"
-    label: "Route Segments" # Used in the UI
-    label_singular: "Segment"
-    folder: "src/segments/"
-    extension: "md"
-    slug: "{{field.order}}-{{field.name}}"
-    create: true # Allow users to create new documents in this collection
-    delete: true # Allow users to delete items in this collection
-    editor:
-      preview: false
-    summary: "{{order}} • {{name}}"
-    description: "Make sure runners stay on course with good directions!"
-    fields:
-      - label: Order
-        name: order
-        widget: number
-        hint: The order of this segment in relation to the start at Appalachia.
-      - label: Segment Name
-        name: name
-        widget: string
-        hint: "Trail name"
-        required: true
-      - label: Segment Stats
-        name: stats
-        widget: array
-        hint: "Segment stats shorthand: Distance, Grade, Elevation Change."
-        required: true
-      - label: Segment Description
-        name: body
-        widget: markdown
-        minimal: true
-        buttons: ['bold', 'italic', 'link']
-        editor_components: []
-        modes: [rich_text]
-        required: true
-        hint: Short description of the segment.
-    sortable_fields: ['order']
+  # - name: "segments" # Used in routes, e.g., /admin/collections/blog
+  #   identifier_field: "name"
+  #   label: "Route Segments" # Used in the UI
+  #   label_singular: "Segment"
+  #   folder: "src/segments/"
+  #   extension: "md"
+  #   slug: "{{field.order}}-{{field.name}}"
+  #   create: true # Allow users to create new documents in this collection
+  #   delete: true # Allow users to delete items in this collection
+  #   editor:
+  #     preview: false
+  #   summary: "{{order}} • {{name}}"
+  #   description: "Make sure runners stay on course with good directions!"
+  #   fields:
+  #     - label: Order
+  #       name: order
+  #       widget: number
+  #       hint: The order of this segment in relation to the start at Appalachia.
+  #     - label: Segment Name
+  #       name: name
+  #       widget: string
+  #       hint: "Trail name"
+  #       required: true
+  #     - label: Segment Stats
+  #       name: stats
+  #       widget: array
+  #       hint: "Segment stats shorthand: Distance, Grade, Elevation Change."
+  #       required: true
+  #     - label: Segment Description
+  #       name: body
+  #       widget: markdown
+  #       minimal: true
+  #       buttons: ['bold', 'italic', 'link']
+  #       editor_components: []
+  #       modes: [rich_text]
+  #       required: true
+  #       hint: Short description of the segment.
+  #   sortable_fields: ['order']
 
 
   - name: "site_info"
