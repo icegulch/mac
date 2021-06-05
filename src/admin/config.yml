@@ -216,7 +216,7 @@ collections:
     format: "toml-frontmatter"
     frontmatter_delimiter: ['---toml', '---']
     summary: "{{run_date | date('YYYY-MM-DD')}} • {{name}} • [{{run_duration}}]"
-    description: "Results for each participant of the MAC. Reports filed here appear in the 'Reports' section of the site."
+    description: "Results for each participant of the MAC, including 'Reports' for those who filed them."
     fields: # The fields for each document, usually in front matter
       - label: Runner's Name
         name: name
