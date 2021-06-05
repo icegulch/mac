@@ -64,7 +64,7 @@
     <script type="module">
       import htm from 'https://unpkg.com/htm?module'
       const html = htm.bind(h);
-      const ResultsPreview = createClass({
+      const AboutPreview = createClass({
         render: function() {
           return (
             html`
@@ -76,7 +76,7 @@
           );
         }
       });
-      CMS.registerPreviewTemplate("results", ResultsPreview);
+      CMS.registerPreviewTemplate("about", AboutPreview);
       CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
     </script>
   </body>
