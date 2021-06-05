@@ -48,22 +48,6 @@
         },
       };
 
-      var ResultsPreview = createClass({
-        render: function() {
-          var entry = this.props.entry;
-          var image = entry.getIn(['data', 'image']);
-          var bg = this.props.getAsset(image);
-          return h('div', {"className": "main-inner__wrapper"},
-            h('h1', {}, entry.getIn(['data', 'title'])),
-            // h('img', {src: bg.toString()}),
-            h('div', {"className": "text"}, this.props.widgetFor('body'))
-          );
-        }
-      });
-
-      CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
-      CMS.registerPreviewTemplate('results', ResultsPreview);
-
       CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
 
       CMS.registerEventListener({
@@ -76,6 +60,24 @@
           }
         },
       });
+    </script>
+    <script type="module">
+      import htm from 'https://unpkg.com/htm?module'
+      const html = htm.bind(h);
+      const ResultsPreview = createClass({
+        render: function() {
+          return (
+            html`
+              <div className='main-inner__wrapper'>
+                <h1 className='blogTitle'>${entry.getIn(['data', 'title'])}</h1>
+                <div className='text'>${widgetFor('body')}</div>
+              </div>
+            `
+          );
+        }
+      });
+      CMS.registerPreviewTemplate("results", ResultsPreview);
+      CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
     </script>
   </body>
 </html>
