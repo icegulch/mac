@@ -47,19 +47,6 @@
           separator: { type: "string" },
         },
       };
-      CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
-      CMS.registerEventListener({
-        name: 'preSave',
-        handler: ({ entry }) => {
-          if (entry.get('collection') === 'results') {
-            const runDate = new Date(entry.getIn(['data', 'run_date'], ''));
-            const year_please = runDate.getFullYear();
-            return entry.get('data').set('year', year_please).set('date', runDate);
-          }
-        },
-      });
-
-      CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
 
       var PagePreview = createClass({
         render: function() {
@@ -74,7 +61,21 @@
         },
       });
 
-      CMS.registerPreviewTemplate('pages', PagePreview);
+      CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
+      CMS.registerPreviewTemplate('about', PagePreview);
+
+      CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
+
+      CMS.registerEventListener({
+        name: 'preSave',
+        handler: ({ entry }) => {
+          if (entry.get('collection') === 'results') {
+            const runDate = new Date(entry.getIn(['data', 'run_date'], ''));
+            const year_please = runDate.getFullYear();
+            return entry.get('data').set('year', year_please).set('date', runDate);
+          }
+        },
+      });
     </script>
   </body>
 </html>
