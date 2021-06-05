@@ -14,12 +14,12 @@
     {{ content | safe }}
 
     <ol>
-      {% for segment in collections.segments | sort(false, true, 'order') %}
+      {% for segment in segments %}
         <li>
-          <h2>{{ segment.data.name }}</h2>
-          {{ segment.templateContent | safe }}
+          <h2>{{ segment.name }}</h2>
+          {{ segment.content | safe }}
           <ul>
-            {% for stat in segment.data.stats %}
+            {% for stat in segment.stats %}
               <li>
                 {{ stat }}
               </li>
