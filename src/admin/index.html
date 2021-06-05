@@ -62,8 +62,15 @@
       var HomePreview = createClass({
         render: function() {
           var entry = this.props.entry;
-          var image = entry.getIn(['data', 'image']);
-          var bg = this.props.getAsset(image);
+          return h('div', {"className": "main-inner"},
+            h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body'))
+          );
+        }
+      });
+
+      var RoutePreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
           return h('div', {"className": "main-inner"},
             h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body'))
           );
@@ -73,6 +80,7 @@
       CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
       CMS.registerPreviewTemplate('results', ResultsPreview);
       CMS.registerPreviewTemplate('home', HomePreview);
+      CMS.registerPreviewTemplate('route', RoutePreview);
 
       CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
 
