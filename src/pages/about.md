@@ -29,4 +29,6 @@ Be grateful that we have the White Mountain National Forest, and wild areas like
 
 Have fun and be supportive of others who are trying the challenge.
 
-Want your free stuff? [Send us](/contact/) a photo of you on the summit showing your time on a watch. We’ll list you in the results, and then will share your name with Saalt Pub. **Note: Just walking in to the pub and saying, “I did the Mount Adams Challenge” doesn’t cut it. Sorry!**
+## Want your free stuff? 
+
+[Send us](/contact/) a photo of you on the summit showing your time on a watch. We’ll list you in the results, and then will share your name with Saalt Pub. **Note: Just walking in to the pub and saying, “I did the Mount Adams Challenge” doesn’t cut it. Sorry!**
