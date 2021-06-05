@@ -91,12 +91,10 @@ body {
     background-color: transparent;
   }
   .main-inner {
-    min-height: 100vh;
-    padding-top: 55px;
-  }
-  .main-inner {
     width: 100%;
     max-width: 960px;
+    min-height: 100vh;
+    padding-top: 55px;
     padding-left: 50px;
     padding-right: 50px;
   }
