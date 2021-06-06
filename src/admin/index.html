@@ -78,6 +78,11 @@
                   return h('li', {key: index},
                     h('h2', {}, segment.getIn(['data', 'name'])),
                     h('p', {}, segment.getIn(['data', 'body'])),
+                    h('ul', {},
+                      widgetsFor('stats').map(function(stat) {
+                        return h('li', {}, `${stat.getIn(['widget'])}`);
+                      }),
+                    ),
                   );
                 }),
               ),
