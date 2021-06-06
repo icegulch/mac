@@ -53,6 +53,7 @@
           var entry = this.props.entry;
           return h('div', {"className": "main-inner"},
             h('div', {"className": "main-inner__wrapper"},
+              h('h1', {}, entry.getIn(['data', 'name'])),
               h('article', {}, this.props.widgetFor('body')))
           );
         }
@@ -76,7 +77,7 @@
                 this.props.widgetsFor('segments').map(function(segment, index) {
                   return h('li', {key: index},
                     h('h2', {}, segment.getIn(['data', 'name'])),
-                    h('h2', {}, segment.getIn(['data', 'body'])),
+                    h('p', {}, segment.getIn(['data', 'body'])),
                   );
                 }),
               ),
