@@ -64,7 +64,7 @@
               ),
               h('dl', {},
                 h('dt', {}, 'Style:'),
-                h('dd', {}, entry.getIn(['data', 'other_runners']).length),
+                h('dd', {}, entry.getIn(['data', 'other_runners'])),
               ),
               h('article', {}, this.props.widgetFor('body'))),
           );
