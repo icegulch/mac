@@ -71,7 +71,21 @@
         render: function() {
           var entry = this.props.entry;
           return h('div', {"className": "main-inner"},
-            h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body'))
+            h('div', {"className": "main-inner__wrapper"},
+              this.props.widgetFor('body'),
+              h('ol', {},
+                this.props.widgetsFor('segments').map(function(segment, index) {
+                  return h('li', {key: index},
+                    h('h2', {}, segment.getIn(['data', 'name'])),
+                    h('p', {}, segment.getIn(['data', 'body'])),
+                    h('ul', {},
+                      this.props.widgetsFor('stats').map(function(stat, index) {
+                        return h('li', {key: index}),
+                    }),
+                  );
+                }),
+              ),
+            ),
           );
         }
       });

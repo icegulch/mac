@@ -82,7 +82,7 @@ collections:
                 required: true
               - label: Segment Stats
                 name: stats
-                widget: array
+                widget: list
                 hint: "Segment stats shorthand: Distance, Grade, Elevation Change."
                 required: true
               - label: Segment Description
