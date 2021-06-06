@@ -81,10 +81,8 @@
                     h('ul', {},
                       segment.getIn(['data', 'stats'], []).map(
                         stat =>
-                          html`
-                            <li>${stat}</li>
-                          `
-                      )
+                          h('li', {}, ${stat})
+                      ),
                     ),
                   );
                 }),
