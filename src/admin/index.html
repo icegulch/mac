@@ -79,10 +79,9 @@
                     h('h2', {}, segment.getIn(['data', 'name'])),
                     h('p', {}, segment.getIn(['data', 'body'])),
                     h('ul', {},
-                      segment.getIn(['data', 'stats'], []).map(
-                        stat =>
-                          h('li', {}, ${stat}),
-                      ),
+                      segment.getIn(['data', 'stats'], []).map(function(stat) {
+                        return h('li', {}, ${stat});
+                      }),
                     ),
                   );
                 }),
