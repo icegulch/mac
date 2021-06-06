@@ -56,11 +56,11 @@
               h('h1', {}, entry.getIn(['data', 'name'])),
               h('dl', {},
                 h('dt', {}, 'Date'),
-                h('dd', {}, this.props.widgetsFor('results').getIn(['widgets', 'run_date']) || 'None'),
+                h('dd', {}, entry.getIn(['data', 'run_date'])),
               ),
               h('dl', {},
                 h('dt', {}, 'Result'),
-                h('dd', {}, this.props.widgetsFor('results').getIn(['data', 'run_duration']) || 'None'),
+                h('dd', {}, entry.getIn(['data', 'run_duration'])),
               ),
               h('article', {}, this.props.widgetFor('body'))),
           );
