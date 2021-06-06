@@ -48,28 +48,28 @@
         },
       };
 
-      // var ResultsPreview = createClass({
-      //   render: function() {
-      //     var entry = this.props.entry;
-      //     return h('div', {"className": "main-inner"},
-      //       h('div', {"className": "main-inner__wrapper"},
-      //         h('h1', {}, entry.getIn(['data', 'name'])),
-      //         h('dl', {},
-      //           h('dt', {}, 'Date:'),
-      //           h('dd', {}, entry.getIn(['data', 'run_date'])),
-      //         ),
-      //         h('dl', {},
-      //           h('dt', {}, 'Time:'),
-      //           h('dd', {}, entry.getIn(['data', 'run_duration'])),
-      //         ),
-      //         h('dl', {},
-      //           h('dt', {}, 'Style:'),
-      //           h('dd', {}, 'Solo or With Other Runners'),
-      //         ),
-      //         h('article', {}, this.props.widgetFor('body'))),
-      //     );
-      //   }
-      // });
+      var ResultsPreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          return h('div', {"className": "main-inner"},
+            h('div', {"className": "main-inner__wrapper"},
+              h('h1', {}, entry.getIn(['data', 'name'])),
+              h('dl', {},
+                h('dt', {}, 'Date:'),
+                h('dd', {}, entry.getIn(['data', 'run_date'])),
+              ),
+              h('dl', {},
+                h('dt', {}, 'Time:'),
+                h('dd', {}, entry.getIn(['data', 'run_duration'])),
+              ),
+              h('dl', {},
+                h('dt', {}, 'Style:'),
+                h('dd', {}, 'Solo or With Other Runners'),
+              ),
+              h('article', {}, this.props.widgetFor('body'))),
+          );
+        }
+      });
 
       var HomePreview = createClass({
         render: function() {
@@ -80,24 +80,24 @@
         }
       });
 
-      // var RoutePreview = createClass({
-      //   render: function() {
-      //     var entry = this.props.entry;
-      //     return h('div', {"className": "main-inner"},
-      //       h('div', {"className": "main-inner__wrapper"},
-      //         this.props.widgetFor('body'),
-      //         h('ol', {},
-      //           this.props.widgetsFor('segments').map(function(segment, index) {
-      //             return h('li', {key: index},
-      //               h('h2', {}, segment.getIn(['data', 'name'])),
-      //               h('p', {}, segment.getIn(['data', 'body'])),
-      //             );
-      //           }),
-      //         ),
-      //       ),
-      //     );
-      //   }
-      // });
+      var RoutePreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          return h('div', {"className": "main-inner"},
+            h('div', {"className": "main-inner__wrapper"},
+              this.props.widgetFor('body'),
+              h('ol', {},
+                this.props.widgetsFor('segments').map(function(segment, index) {
+                  return h('li', {key: index},
+                    h('h2', {}, segment.getIn(['data', 'name'])),
+                    h('p', {}, segment.getIn(['data', 'body'])),
+                  );
+                }),
+              ),
+            ),
+          );
+        }
+      });
 
       var ContactPreview = createClass({
         render: function() {
