@@ -79,8 +79,8 @@
                     h('h2', {}, segment.getIn(['data', 'name'])),
                     h('p', {}, segment.getIn(['data', 'body'])),
                     h('ul', {},
-                      this.props.widgetsFor('stats').map(function(stat, index) {
-                        console.log(stat);
+                      widgetFor('stats').map(function(stat,index) {
+                        console.log(stat,index);
                       }),
                     ),
                   );
