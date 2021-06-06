@@ -72,14 +72,15 @@
           var entry = this.props.entry;
           return h('div', {"className": "main-inner"},
             h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body'),
-            this.props.widgetsFor('segments').map(function(segment, index) {
-              return h('ol', {key: index},
-                h('li', {},
-                  h('h2', {}, segment.getIn(['data', 'name'])),
-                  h('p', {}, segment.getIn(['data', 'body'])),
-                ),
-              );
-            }))
+              h('ol', {}
+                this.props.widgetsFor('segments').map(function(segment, index) {
+                  return h('li', {key: index},
+                    h('h2', {}, segment.getIn(['data', 'name'])),
+                    h('p', {}, segment.getIn(['data', 'body'])),
+                  );
+                }),
+              ),
+            ),
           );
         }
       });
