@@ -76,7 +76,12 @@
                 this.props.widgetsFor('segments').map(function(segment, index) {
                   return h('li', {key: index},
                     h('h2', {}, segment.getIn(['data', 'name'])),
-                    segment.getIn(['data', 'body']),
+                    h('h2', {}, segment.getIn(['data', 'body'])),
+                    h('ul', {},
+                      this.props.widgetsFor('stats').map(function(stat, index) {
+                        return h('li', {key: index});
+                      }),
+                    ),
                   );
                 }),
               ),
