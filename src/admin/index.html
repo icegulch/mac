@@ -54,7 +54,15 @@
           return h('div', {"className": "main-inner"},
             h('div', {"className": "main-inner__wrapper"},
               h('h1', {}, entry.getIn(['data', 'name'])),
-              h('article', {}, this.props.widgetFor('body')))
+              h('dl', {},
+                h('dt', {}, 'Date'),
+                h('dd', {}, this.props.widgetsFor('results').getIn(['widgets', 'run_date']) || 'None'),
+              ),
+              h('dl', {},
+                h('dt', {}, 'Result'),
+                h('dd', {}, this.props.widgetsFor('results').getIn(['data', 'run_duration']) || 'None'),
+              ),
+              h('article', {}, this.props.widgetFor('body'))),
           );
         }
       });
