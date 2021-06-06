@@ -53,7 +53,7 @@
           var entry = this.props.entry;
           return h('div', {"className": "main-inner"},
             h('div', {"className": "main-inner__wrapper"},
-              h('h1', {}, `${entry.getIn(['data', 'name'])}'s MAC Report)`,
+              h('h1', {}, `${entry.getIn(['data', 'name'])}'s MAC Report`),
               h('article', {}, this.props.widgetFor('body'))),
           );
         }
