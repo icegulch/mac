@@ -1,4 +1,4 @@
-.main-inner form label {
+form label {
   margin-top: 2rem;
   display: block;
   width: 100%;
@@ -6,7 +6,7 @@
   font-size: 28px;
 }
 
-.main-inner input, .main-inner textarea {
+input, textarea {
   display: block;
   padding: .5rem .25rem;
   width: 100%;
@@ -14,7 +14,7 @@
   border-radius: 4px;
 }
 
-.main-inner form .aria-invisible {
+form .aria-invisible {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -25,13 +25,13 @@
   width: 1px;
 }
 
-.main-inner .btn {
+.btn {
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
   background-color: #EA580C;
   color: #fff;
 }
 
-.main-inner .btn:hover {
+.btn:hover {
   background-color: #334155;
 }

@@ -24,7 +24,7 @@
   margin: 0 auto;
 }
 
-.main-inner h1 {
+h1 {
   transform: skew(-10deg);
   margin-bottom: 2rem;
   font: 36px/1 'Teko', sans-serif;
@@ -32,67 +32,67 @@
 }
 
 @media (min-width: 1125px), (min-width: 700px) and (max-width: 991px) {
-  .main-inner h1 {
+  h1 {
     transform: skew(-10deg) translateX(-25px);
   }
 }
 
-.main-inner h2 {
+h2 {
   margin-bottom: 0.3718rem;
   font-family: 'Teko', sans-serif;
   font-size: 28px;
   color: #334155;
 }
 
-.main-inner h3, .main-inner h4, .main-inner h5 {
+h3, h4, h5 {
   font-weight: 600;
 }
 
-.main-inner h3 {
+h3 {
   font-size: 1.5rem;
 }
 
-.main-inner h4 {
+h4 {
   font-size: 1.3rem;
 }
 
-.main-inner h5 {
+h5 {
   font-size: 1.1;
 }
 
-.main-inner h6 {
+h6 {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
 }
 
-.main-inner p + p {
+p + p {
   margin-top: 1rem;
 }
 
-.main-inner p + h2, .main-inner ul + h2 {
+p + h2, ul + h2 {
   margin-top: 2rem;
 }
 
-.main-inner figcaption {
+figcaption {
   margin: 6px 0 2rem;
   text-align: right;
   font-size: 0.8rem;
 }
 
-.main-inner a {
+a {
   text-decoration: underline;
 }
 
-.main-inner a:hover {
+a:hover {
   text-decoration: none;
 }
 
-.main-inner strong, .main-inner dt {
+strong, dt {
   font-weight: 600;
 }
 
-.main-inner em {
+em {
   font-style: italic;
 }
 
