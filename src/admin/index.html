@@ -67,21 +67,21 @@
         }
       });
 
-      var RoutePreview = createClass({
-        render: function() {
-          var entry = this.props.entry;
-          return h('div', {"className": "main-inner"},
-            h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body')
-              this.props.widgetsFor('segments').map(function(segment, index) {
-                return h('ol', {key: index},
-                  h('li', {},
-                    h('h2', {}, segment.getIn(['data', 'name'])),
-                  )
-                )}
-              )
-          );
-        }
-      });
+      // var RoutePreview = createClass({
+      //   render: function() {
+      //     var entry = this.props.entry;
+      //     return h('div', {"className": "main-inner"},
+      //       h('div', {"className": "main-inner__wrapper"}, this.props.widgetFor('body')
+      //         this.props.widgetsFor('segments').map(function(segment, index) {
+      //           return h('ol', {key: index},
+      //             h('li', {},
+      //               h('h2', {}, segment.getIn(['data', 'name'])),
+      //             )
+      //           )}
+      //         )
+      //     );
+      //   }
+      // });
 
       var ContactPreview = createClass({
         render: function() {
@@ -110,6 +110,8 @@
         }
       });
 
+      CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
+
       CMS.registerPreviewStyle("https://www.mountadamschallenge.org/assets/css/styles.css");
       CMS.registerPreviewTemplate('results', ResultsPreview);
       CMS.registerPreviewTemplate('home', HomePreview);
@@ -117,8 +119,6 @@
       CMS.registerPreviewTemplate('contact', ContactPreview);
       CMS.registerPreviewTemplate('thank-you', ThankYouPreview);
       CMS.registerPreviewTemplate('error-404', ErrorPreview);
-
-      CMS.registerWidget("array", ArrayControl, ArrayPreview, schema);
 
       CMS.registerEventListener({
         name: 'preSave',
