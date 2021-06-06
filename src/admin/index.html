@@ -76,7 +76,7 @@
                 this.props.widgetsFor('segments').map(function(segment, index) {
                   return h('li', {key: index},
                     h('h2', {}, segment.getIn(['data', 'name'])),
-                    h('div', {}, this.props.widgetFor('segment.body')),
+                    segment.getIn(['data', 'body']),
                   );
                 }),
               ),
