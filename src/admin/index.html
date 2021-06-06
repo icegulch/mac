@@ -76,7 +76,7 @@
               return h('ol', {key: index},
                 h('li', {},
                   h('h2', {}, segment.getIn(['data', 'name'])),
-                  segment.getIn(['data', 'body']),
+                  h('p', {}, segment.getIn(['data', 'body'])),
                 ),
               );
             }))
