@@ -7,7 +7,7 @@ segments:
     stats:
       - 0.9mi
       - 12%
-      - + 594ft
+      - +594ft
     body: Start with one hand on the kiosk at Appalachia. Set a stop watch to zero
       and start it running! Run up Valley Way to the junction with Brookside.
       Turn left on Brookside.
@@ -15,7 +15,7 @@ segments:
     stats:
       - 1.7mi
       - 15%
-      - + 1350ft
+      - +1350ft
     body: Run Brookside to Watson Path, turn right on Watson Path. **Watch for the
       turn off from Brookside to Watson Path very closely. It comes in at a
       shallow angle and is very easy to miss!**
@@ -27,25 +27,25 @@ segments:
     stats:
       - 0.3mi
       - 0%
-      - "- 75ft"
+      - -75ft
   - body: Run Scar Trail to Air Line, turn left on Air Line.
     name: Scar Trail
     stats:
       - 0.7mi
       - 14%
-      - + 525ft
+      - +525ft
   - body: Run Air Line to Gulfside. Turn right onto Gulfside.
     name: Airline
     stats:
       - 1.2mi
       - 23%
-      - + 1425ft
+      - +1425ft
   - body: Run Gulfside to Thunderstorm Junction. Turn left onto Lowe's Path.
     name: Gulfside
     stats:
       - 0.6mi
       - 12%
-      - + 365ft
+      - +365ft
   - body: Run Lowe's Path to the summit of Adams. Touch the sign. Turn off your stop
       watch. Snap a photo with the time on your watch showing, and the Mount
       Adams summit sign.
@@ -53,7 +53,7 @@ segments:
     stats:
       - 0.2mi
       - 29%
-      - + 309ft
+      - +309ft
 ---
 # The Route
 
