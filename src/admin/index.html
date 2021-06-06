@@ -51,6 +51,7 @@
       var ResultsPreview = createClass({
         render: function() {
           var entry = this.props.entry;
+          var value = entry.getIn(['data', 'other_runners']).length ? entry.getIn(['data', 'With ' + 'other_runners']) : 'Solo'
           return h('div', {"className": "main-inner"},
             h('div', {"className": "main-inner__wrapper"},
               h('h1', {}, entry.getIn(['data', 'name'])),
@@ -64,11 +65,7 @@
               ),
               h('dl', {},
                 h('dt', {}, 'Style:'),
-                if (entry.getIn(['data', 'other_runners']).length) {
-                  h('dd', {}, 'foo'),
-                } else {
-                  h('dd', {}, 'bar'),
-                }
+                h('dd', {}, { value }),
               ),
               h('article', {}, this.props.widgetFor('body'))),
           );
