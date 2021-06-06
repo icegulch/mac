@@ -80,7 +80,7 @@
                     h('p', {}, segment.getIn(['data', 'body'])),
                     h('ul', {},
                       segment.getIn(['data', 'stats'], []).map(function(stat) {
-                        return h('li', {}, ${stat});
+                        return h('li', {}, `${stat}`);
                       }),
                     ),
                   );
