@@ -64,7 +64,7 @@
               ),
               h('dl', {},
                 h('dt', {}, 'Style:'),
-                h('dd', {}, 'With' + entry.getIn(['data', 'other_runners'])),
+                h('dd', {}, { entry.getIn(['data', 'other_runners']).length ? entry.getIn(['data', 'other_runners']) : 'Solo' }),
               ),
               h('article', {}, this.props.widgetFor('body'))),
           );
