@@ -79,7 +79,7 @@
                     h('h2', {}, segment.getIn(['data', 'name'])),
                     h('p', {}, segment.getIn(['data', 'body'])),
                     h('ul', {},
-                      this.props.widgetsFor(['data', 'stats']).map(function(stat) {
+                      this.props.widgetsFor(segment.getIn(['data', 'stats'])).map(function(stat) {
                         return h('li', {}, `${stat.getIn(['data'])}` );
                       }),
                     ),
