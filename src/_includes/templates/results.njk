@@ -5,24 +5,27 @@
   <div class="main-inner__wrapper">
     {{ content | safe }}
 
-    {% for year, yearResults in results | groupby('data.year') | dictsort | reverse %}
-      <details open>
-        <summary>
-          {{ year }} Results
-        </summary>
-        <ul class="results-list">
-        {% for result in yearResults | reverse %}
-          <li class="results-list__item">
-            <a href="/results/{{ result.data.run_date | slugify }}-{{ result.data.name | slugify }}/">
-              <span>{{ result.data.run_date | shortDate }}</span>
-              <span class="name">{{ result.data.name }}</span>
-              <span>{{ result.data.run_duration }}</span>
-            </a>
-          </li>
-        {% endfor %}
-        </ul>
-      </details>
-    {% endfor %}
+      {% for year, yearResults in results | groupby('data.year') | dictsort | reverse %}
+        {% if year == 2020 %}
+        {% else %}
+          <details open>
+            <summary>
+              {{ year }} Results
+            </summary>
+            <ul class="results-list">
+            {% for result in yearResults | reverse %}
+              <li class="results-list__item">
+                <a href="/results/{{ result.data.run_date | slugify }}-{{ result.data.name | slugify }}/">
+                  <span>{{ result.data.run_date | shortDate }}</span>
+                  <span class="name">{{ result.data.name }}</span>
+                  <span>{{ result.data.run_duration }}</span>
+                </a>
+              </li>
+            {% endfor %}
+            </ul>
+          </details>
+        {% endif %}
+      {% endfor %}
   </div>
   
 {% endblock %}
