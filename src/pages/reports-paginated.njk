@@ -1,8 +1,9 @@
 ---
 pagination:
-  data: collections.results
+  data: collections.resultsSans2020
   size: 1
   alias: report
+  before: function()
   reverse: true
 permalink: "/results/{{ report.data.run_date | htmlDateString | slugify }}-{{ report.data.name | slugify }}/index.html"
 eleventyComputed:
