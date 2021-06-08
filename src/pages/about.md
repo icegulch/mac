@@ -31,6 +31,8 @@ Be grateful that we have the White Mountain National Forest, and wild areas like
 
 Have fun and be supportive of others who are trying the challenge.
 
-## Want your free stuff? 
+## Want your free stuff?
 
-[Send us](/contact/) a photo of you on the summit showing your time on a watch. We’ll list you in the results, and then will share your name with Saalt Pub. **Note: Just walking in to the pub and saying, “I did the Mount Adams Challenge” doesn’t cut it. Sorry!**
+[Send us](/contact/) a photo of you on the summit showing your elapsed time on your watch. We’ll list you in the results, and will send you a highly-coveted Mount Adams Challenge certificate.
+
+To claim your free beer at SAALT Pub, you will need to present your finisher photo showing your time on the summit of Mount Adams. **Just walking in to the pub and saying, “I did the Mount Adams Challenge” doesn’t cut it. Sorry!**
