@@ -1,9 +1,9 @@
 ---toml
 name = "Christopher Shipley"
-run_date = "2021-08-04"
+run_date = "2021-08-05"
 run_duration = "2:07:29"
 year = 2021
-date = 2021-08-04T00:00:00.000Z
+date = 2021-08-05T00:00:00.000Z
 ---
 Yesterday I decided to head up north to work on my adopted trail, the Mt Clay Loop.  Since I was going to be near Appalachia, I decided to give the Mt Adams Challenge a go first and then do the trail work afterwards.  I wrote up and printed out some trail info and also made a map to put on my phone.
 
