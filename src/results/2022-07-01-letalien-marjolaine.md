@@ -6,3 +6,5 @@ other_runners = ["Bertrand Baud-Lavigne"]
 year = 2022
 date = 2022-07-05T00:00:00.000Z
 ---
+
+[Strava Link](https://strava.app.link/DPf1OZP0jrb)
