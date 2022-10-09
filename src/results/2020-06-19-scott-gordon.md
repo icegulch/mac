@@ -11,10 +11,10 @@ I'm reporting a successful MAC attempt on June 19, 2020.
 
 2:01:45 rounded up.
 
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/2020-06-19scott-gordon2.png" loading="lazy" alt="Scott's Stopwatch Reading" width="360" height="640">
 
 Real hot for the first two miles, then good. The Brookside has had some improvements in a badly eroded spot. Nice to see, saved some seconds. It was so nice to lay on a snowfield near Adams 4 and get cold. Glorious.
 
 Thank you. This is one of my favorite days yearly. #7.
 
-<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/2020-06-19scott-gordon2.png" loading="lazy" alt="Scott's Stopwatch Reading" width="360" height="640">
 
