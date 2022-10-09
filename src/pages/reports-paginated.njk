@@ -1,13 +1,19 @@
----
-pagination:
-  data: collections.resultsSans2020
-  size: 1
-  alias: report
-  before: function()
-  reverse: true
-permalink: "/results/{{ report.data.run_date | htmlDateString | slugify }}-{{ report.data.name | slugify }}/index.html"
-eleventyComputed:
-  title: "{{ report.data.name }}'s {{ report.data.run_date | postDate }} Report"
+---js
+{  
+  pagination: {
+    data: "collections.resultsSans2020",
+    size: 1,
+    alias: "report",
+    before: function(data) {
+      return data.sort((a,b) => new Date(a.data.run_date) - new Date(b.data.run_date))
+    },
+    reverse: true
+  },
+  permalink: "/results/{{ report.data.run_date | htmlDateString | slugify }}-{{ report.data.name | slugify }}/index.html",
+  eleventyComputed: {
+    title: "{{ report.data.name }}'s {{ report.data.run_date | postDate }} Report"
+  }
+}
 ---
 
 {% extends 'layouts/base.njk' %}
