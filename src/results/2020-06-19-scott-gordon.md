@@ -16,5 +16,5 @@ Real hot for the first two miles, then good. The Brookside has had some improvem
 
 Thank you. This is one of my favorite days yearly. #7.
 
-<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/2020-06-19scott-gordon.png" loading="lazy" alt="Scott's Stopwatch Reading" width="360" height="640">
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/2020-06-19scott-gordon2.png" loading="lazy" alt="Scott's Stopwatch Reading" width="360" height="640">
 

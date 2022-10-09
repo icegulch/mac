@@ -5,7 +5,7 @@
   <div class="main-inner__wrapper">
     {{ content | safe }}
 
-      {% for year, yearResults in collections.resultsSans2020 | groupby('data.year') | dictsort | reverse %}
+      {% for year, yearResults in collections.results | groupby('data.year') | dictsort | reverse %}
         <details open>
           <summary>
             {{ year }} Results

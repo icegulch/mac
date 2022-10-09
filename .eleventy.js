@@ -82,13 +82,6 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
-  // hide 2020 results
-  eleventyConfig.addCollection('resultsSans2020', function(collection) {
-    return collection
-      .getFilteredByTag("results")
-      .filter((result) => result.data.year != 2020);
-  });
-
   // deep merge
   eleventyConfig.setDataDeepMerge(true);
 
