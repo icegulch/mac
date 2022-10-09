@@ -1,17 +1,32 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="prefetch" as="font" href="/assets/fonts/teko-v10-latin-regular.woff2" crossorigin="anonymous">
+    {% if helpers.env === 'production' %}
+      <link rel="preload" href="/fonts/teko-v10-latin-regular.woff2" as="font" type="font/woff" crossorigin/>
+      <link rel="preload" href="/fonts/teko-v10-latin-regular.woff" as="font" type="font/woff2" crossorigin/>
+    {% endif %}
     <meta charset="UTF-8">
     <title>
       {{ site_meta.title if title == 'About' else title + ' | ' + site_meta.title }}
     </title>
     <meta name="description" content="{{ site_meta.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% include "partials/og.njk" %}
     {% include "partials/icons.njk" %}
+    {% include "partials/og.njk" %}
+    {% if helpers.env === 'production' %}
+      <link rel="preconnect" href="//res.cloudinary.com">
+      <link rel="dns-prefetch" href="//res.cloudinary.com">
+    {% endif %}
     {% set css %}
-      {% include "css/font.css" %}
+      @font-face {
+        font-family: 'Teko';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local(''),
+            url('/fonts/teko-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('/fonts/teko-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
       {% include "css/_preflight.css" %}
       {% include "css/styles.css" %}
       {% if page.fileSlug == 'route' %}

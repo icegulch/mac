@@ -11,7 +11,7 @@
             {{ year }} Results
           </summary>
           <ul class="results-list">
-          {% for result in yearResults | reverse %}
+          {% for result in yearResults | sort(true, false, "data.run_date") %}
             <li class="results-list__item">
               <a href="/results/{{ result.data.run_date | slugify }}-{{ result.data.name | slugify }}/">
                 <span>{{ result.data.run_date | shortDate }}</span>

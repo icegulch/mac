@@ -5,7 +5,7 @@ run_duration = "2:07:32"
 year = 2015
 date = 2015-06-24T00:00:00.000Z
 ---
-<img src="/assets/images/uploads/kruschwitz-summit.jpg" alt="Dave at the Summit" width="500" height="281">
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/kruschwitz-summit.jpg" loading="lazy" alt="Dave at the Summit" width="500" height="281">
 
 And on June 24, Dave Kruschwitz from Limerick, Maine had a great day for the Mount Adams Challenge. Congrats, Dave! Here's his story:
 
@@ -19,9 +19,9 @@ I hit Airline at 1:10 and was feeling pretty comfortable about making the goal, 
 
 Turning left at Thunderstorm Junction, the rocks were very slippery from the fog and I really had to pick and feel my way to the top.  I had not been there in over 25 years, so was a bit nonplussed to get to what to me was obviously the top but no sign saying “Mt Adams” for the finish photo.  Guess I should have read the blog first!   Didn't see a soul all the way up– though I did see wet bootprints on Brookside and Watson and wondered if I was trailing another “challenger.”
 
-<img src="/assets/images/uploads/kruschwitz-watch.jpg" alt="Dave's Watch at the Summit Sign" width="500" height="281">
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/kruschwitz-watch.jpg" loading="lazy" alt="Dave's Watch at the Summit Sign" width="500" height="281">
 
-<img src="/assets/images/uploads/kruschwitz-view.jpg" alt="Dave's View from the Summit" width="500" height="281">
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/kruschwitz-view.jpg" loading="lazy" alt="Dave's View from the Summit" width="500" height="281">
 
 I didn't hang around on top even though the clouds were blowing off - my fingers were blocks of ice thanks to Reynauds Syndrome .Taking photos with a cell phone camera was a challenge.  Very happy to clamber down to Madison Spring and get some hot coffee!  Thanks, AMC, for that!  And thanks to those who took the time to set up the Challenge.  Going down the Valley Way was as much of a challenge as the trip up given the mud and tired knees! Now I know why the route up was the the drier and more convoluted one.   So now I'm looking for a new goal - any suggestions?
 

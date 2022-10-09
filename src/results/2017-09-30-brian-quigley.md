@@ -6,6 +6,6 @@ year = 2017
 date = 2017-09-30T00:00:00.000Z
 ---
 
-<img src="/assets/images/uploads/quigley-strava.png" alt="The deets from Brian's GPS app" width="750" height="1334">
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/quigley-strava.png" loading="lazy" alt="The deets from Brian's GPS app" width="750" height="1334">
 
 

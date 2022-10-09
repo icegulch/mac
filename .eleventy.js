@@ -14,16 +14,8 @@ module.exports = function (eleventyConfig) {
 
   // Let some files pass through to public
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
-  eleventyConfig.addPassthroughCopy("./src/assets/**");
-  eleventyConfig.addPassthroughCopy("./src/mac-directions-with-profile.pdf");
+  eleventyConfig.addPassthroughCopy("./src/fonts/");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
-  eleventyConfig.addPassthroughCopy('./src/admin/**');
-  eleventyConfig.addPassthroughCopy('./src/admin/config.yml');
-  eleventyConfig.addPassthroughCopy('./src/admin/index.html');
-  eleventyConfig.addPassthroughCopy('./src/admin/confirmation.html');
-  eleventyConfig.addPassthroughCopy('./src/admin/email-change.html');
-  eleventyConfig.addPassthroughCopy('./src/admin/invitation.html');
-  eleventyConfig.addPassthroughCopy('./src/admin/recovery.html');
 
   eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
 
