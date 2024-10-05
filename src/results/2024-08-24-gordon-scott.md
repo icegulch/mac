@@ -10,6 +10,6 @@ After a three year hiatus, I took a shot at the MAC again. This was my eighth ti
 
 A glorious day for a long trail run in the Northern Presidentials and this was the perfect opportunity to try the MAC again as part of it.
 
-<img src="https://res.cloudinary.com/mount-adams-challenge/image/upload/v1724628164/IMG_2183.jpg" width="4032" height="3024" loading="lazy" alt="Scott atop Mount Adams (this was part of a longer run for him)">
-<img src="https://res.cloudinary.com/mount-adams-challenge/image/upload/v1724628164/IMG_2179.jpg" width="4032" height="3024" loading="lazy" alt="The sign at Appalachia">
-<img src="https://res.cloudinary.com/mount-adams-challenge/image/upload/v1724628164/IMG_2181.png" width="750" height="1334" loading="lazy" alt="The deets!">
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/IMG_2183.jpg" width="4032" height="3024" loading="lazy" alt="Scott atop Mount Adams (this was part of a longer run for him)">
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/IMG_2179.jpg" width="4032" height="3024" loading="lazy" alt="The sign at Appalachia">
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/IMG_2181.png" width="750" height="1334" loading="lazy" alt="The deets!">
