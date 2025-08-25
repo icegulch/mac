@@ -1,98 +1,82 @@
-const htmlmin = require("html-minifier");
-const { DateTime } = require("luxon");
-const slugify = require("slugify");
-require("dotenv").config();
-const util = require('util');
-const toml = require("toml");
-const CleanCSS = require("clean-css");
+// .eleventy.js (ESM, Eleventy v3+)
+import "dotenv/config";
+import { DateTime } from "luxon";
+import slugify from "slugify";
+import toml from "toml";
+import CleanCSS from "clean-css";
+import * as htmlmin from "html-minifier-terser";
+import MarkdownIt from "markdown-it";
 
+export default function (eleventyConfig) {
+  const env = process.env.ELEVENTY_ENV;
 
-module.exports = function (eleventyConfig) {
-
-  // A useful way to reference the context we are runing eleventy in
-  let env = process.env.ELEVENTY_ENV;
-
-  // Let some files pass through to public
+  // Passthroughs
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPassthroughCopy("./src/fonts/");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
-  eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
+  // Remove YAML extension (we're not using js-yaml anymore)
 
+  // Front matter: TOML support
   eleventyConfig.setFrontMatterParsingOptions({
-    engines: {
-      toml: toml.parse.bind(toml)
-    }
+    engines: { toml: toml.parse.bind(toml) },
   });
 
-  const MarkdownIt = require("markdown-it");
+  // Markdown render filter
   const mdRender = new MarkdownIt();
-  eleventyConfig.addFilter("renderUsingMarkdown", function(rawString) {
-    return mdRender.render(rawString);
-  });
+  eleventyConfig.addFilter("renderUsingMarkdown", (raw) => mdRender.render(raw));
 
-  // Slugify
-  eleventyConfig.addFilter("slugify", function (str) {
-    return slugify(str, {
+  // Slugify (custom)
+  eleventyConfig.addFilter("slugify", (str) =>
+    slugify(str, {
       lower: true,
       replacement: "-",
-      remove: /[*+~.·,()'"`´%!?¿:@]/g
-    });
+      remove: /[*+~.·,()'"`´%!?¿:@]/g,
+    })
+  );
+
+  // Date filters
+  eleventyConfig.addFilter("postDate", (d) =>
+    DateTime.fromISO(d, { zone: "utc" }).toFormat("LLLL d, yyyy")
+  );
+  eleventyConfig.addFilter("shortDate", (d) =>
+    DateTime.fromISO(d, { zone: "utc" }).toFormat("LLL-dd")
+  );
+  eleventyConfig.addFilter("gimmeYear", (d) =>
+    DateTime.fromISO(d, { zone: "utc" }).toFormat("yyyy")
+  );
+  eleventyConfig.addFilter("htmlDateString", (d) =>
+    DateTime.fromISO(d, { zone: "utc" }).toFormat("yyyy-LL-dd")
+  );
+
+  // Debug dump (Node util.inspect via dynamic import keeps top clean)
+  eleventyConfig.addFilter("dump", async (obj) => {
+    const util = await import("node:util");
+    return util.default.inspect(obj);
   });
 
-  // Nice date for post-y type things
-  eleventyConfig.addFilter("postDate", dateObj => {
-    return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("LLLL d, yyyy");
-  });
+  // CSS minify
+  eleventyConfig.addFilter("cssmin", (code) => new CleanCSS({}).minify(code).styles);
 
-  // Short date for results page
-  eleventyConfig.addFilter("shortDate", dateObj => {
-    return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("LLL-dd");
-  });
-
-  // Short date for results page
-  eleventyConfig.addFilter("gimmeYear", dateObj => {
-    return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("yyyy");
-  });
-
-  // htmlDateString
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-     return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
-  });
-
-  eleventyConfig.addFilter('dump', obj => {
-      return util.inspect(obj)
-  });
-
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
-
-  // Minify HTML Output
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if(process.env.ELEVENTY_ENV === 'production' && outputPath && outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
+  // HTML minify (only in production)
+  eleventyConfig.addTransform("htmlmin", async function (content, outputPath) {
+    if (env === "production" && outputPath && outputPath.endsWith(".html")) {
+      return await htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       });
-      return minified;
     }
     return content;
   });
 
-  // deep merge
-  eleventyConfig.setDataDeepMerge(true);
+  // Deep merge is default in v3; no need to setDataDeepMerge(true)
+  // passthroughFileCopy is no-op in v3
 
   return {
-    dir: {
-      input: "src",
-      output: "public",
-    },
+    dir: { input: "src", output: "public" },
     templateFormats: ["njk", "md"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    passthroughFileCopy: true,
   };
-};
+}
