@@ -22,6 +22,10 @@ I turned up Lowe’s Path at Thunderstorm Junction and just tried to be smart an
 
 In 2:07:21, by less than three minutes again but 29 seconds faster than last year. No complaints here.
 
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/IMG_0968" width="4032" height="3024" loading="lazy" alt="Scott atop Mount Adams (this was part of a longer run for him)">
+
+<img src="https://res.cloudinary.com/mount-adams-challenge/f_auto,c_limit,w_1000,h_800/results/IMG_0977" width="1179" height="2556" loading="lazy" alt="Scott's running stats">
+
 I “ran” down Lowe’s Path, tagging Adams IV on the way by, and really only running often in the lower half of the trail but still moving somewhat quickly down the upper steeps.
 
 A 2.5 mile rail trail run (lap 4) to ease the leg muscles some and finish up a glorious day. 9th time completed since 2014. I’ve been within 3 minutes of the cutoff for 2 years. This of course begs a question...
